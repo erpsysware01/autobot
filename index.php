@@ -1,7 +1,7 @@
 <?php
 
-$channelSecret = 'cc6fd38c42ec3bb8dd35ce9b583b2169';
-$strAccessToken = "LjOVkLk+rmVuT/t7C2SHHVZDxLELhGLzm9U+GfdC1y7FKxzScnezu57FUSdkFoMvJqNGBne/dNaowtMG52HicJpufML6G6zBmRzBXVbxS/wSx5TnVlC6W9nDtQFHlFkBwH22PnKEegvTMbsTVjQNQQdB04t89/1O/w1cDnyilFU=";
+$channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
+$strAccessToken = "NkNrcU3TLsP3hx2W8TxEMH15/KfQaHLS18n7ewNaPwO7Ngx6fcFhA1cO+QTg7dyFUSk+9XRH6E/wivR5ENkgbbh8FGxx3dge6/ZJYkxdSiDdZkwMaw4zDrSuRnIREOptHFKv/qXmkuSqYbcCbKzcFwdB04t89/1O/w1cDnyilFU=";
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
