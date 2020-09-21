@@ -1,9 +1,5 @@
 <?php
 
-require "index_api.php";
-require "vendor/autoload.php";
-
-
 $channelSecret = 'cc6fd38c42ec3bb8dd35ce9b583b2169';
 $strAccessToken = "LjOVkLk+rmVuT/t7C2SHHVZDxLELhGLzm9U+GfdC1y7FKxzScnezu57FUSdkFoMvJqNGBne/dNaowtMG52HicJpufML6G6zBmRzBXVbxS/wSx5TnVlC6W9nDtQFHlFkBwH22PnKEegvTMbsTVjQNQQdB04t89/1O/w1cDnyilFU=";
 
