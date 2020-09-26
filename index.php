@@ -96,15 +96,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 //**********************************************************ลูบสุดท้าย******************************************* */
 }else{
 
-  $tank="https://raw.githubusercontent.com/aicit2015/picture/master/Aic%20sticker%20line%2024%20pose-15.png";
+  // $tank="https://raw.githubusercontent.com/aicit2015/picture/master/Aic%20sticker%20line%2024%20pose-15.png";
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักอีกครั้งนะครับ";
  
-  $arrPostData['messages'][1]['type'] = "image";
-  $arrPostData['messages'][1]['originalContentUrl'] = $tank;
-  $arrPostData['messages'][1]['previewImageUrl'] = $tank;
+  // $arrPostData['messages'][1]['type'] = "image";
+  // $arrPostData['messages'][1]['originalContentUrl'] = $tank;
+  // $arrPostData['messages'][1]['previewImageUrl'] = $tank;
 }
   //random ข้อความ
   // $a=array("ขอโทษครับ บอทยังไม่เข้าใจคำถาม","ไม่แน่ใจว่าถูกมั๊ย","ลองพิมพ์ใหม่อีกครั้ง หรือเลือกเมนูด้านล่างได้นะครับ 🙇","yellow","brown");
