@@ -119,9 +119,9 @@ $arrJson['events'][0]['message']['text'] == $arrJson['events'][0]['message']['te
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ".  555555;    //รหัสบัตรประชาชน********
+  $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
   $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "123456789";
+  $arrPostData['messages'][1]['text'] = "HELLO WORD";
 
 
 
