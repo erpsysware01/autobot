@@ -90,10 +90,10 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
     }
 //**********************************************************เลขบัตรประชาชน******************************* */
 
-// $arrJson['events'][0]['message']['text'] == $arrJson['events'][0]['message']['text'] 
+
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
  
-  // $data=$arrJson['events'][0]['message']['text'];   
+  $data=$arrJson['events'][0]['message']['text'];   
   
   
   // $data_api = array(
