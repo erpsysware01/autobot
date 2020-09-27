@@ -101,7 +101,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลojt"; 
+$arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
 
 }
 
