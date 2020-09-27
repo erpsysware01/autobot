@@ -52,27 +52,27 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $data=$arrJson['events'][0]['message']['text'];   
   
   
-  $data_api = array(
-    'id_card'      => $data,
-    'payment_type'  => 2
-  );
+  // $data_api = array(
+  //   'id_card'      => $data,
+  //   'payment_type'  => 2
+  // );
 
-  $options = array(
-    'http' => array(
-      'method'  => 'POST',
-      'content' => json_encode( $data_api ),
-      'header'=>  "Content-Type: application/json\r\n" .
-                  "Accept: application/json\r\n"
-      )
-  );
+  // $options = array(
+  //   'http' => array(
+  //     'method'  => 'POST',
+  //     'content' => json_encode( $data_api ),
+  //     'header'=>  "Content-Type: application/json\r\n" .
+  //                 "Accept: application/json\r\n"
+  //     )
+  // );
   
-  $url = "http://103.80.49.95:82/postchkprice/";
-  $context  = stream_context_create( $options );
-  $result = file_get_contents( $url, false, $context );
-  $response = json_decode( $result );
+  // $url = "http://103.80.49.95:82/postchkprice/";
+  // $context  = stream_context_create( $options );
+  // $result = file_get_contents( $url, false, $context );
+  // $response = json_decode( $result );
   
-  require "fleax_masage/card.php";
-  
+  require "fleax_masage/card.php?id_card=$data";
+ 
   // if($response->database == 'CONNECTED'){
 
   // $arrPostData = array();

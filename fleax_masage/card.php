@@ -9,24 +9,24 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $content = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($content , true);   // Decode JSON to Array
 
+$data=$_REQUEST["id_card"];
+// $data_api = array(
+//   'id_card'      => $data
+// );
 
-$data_api = array(
-  'id_card'      => $data
-);
+// $options = array(
+//   'http' => array(
+//     'method'  => 'POST',
+//     'content' => json_encode( $data_api ),
+//     'header'=>  "Content-Type: application/json\r\n" .
+//                 "Accept: application/json\r\n"
+//     )
+// );
 
-$options = array(
-  'http' => array(
-    'method'  => 'POST',
-    'content' => json_encode( $data_api ),
-    'header'=>  "Content-Type: application/json\r\n" .
-                "Accept: application/json\r\n"
-    )
-);
-
-$url = "https://select2web-autobot-test.herokuapp.com/register_by_idcard";
-$context  = stream_context_create( $options );
-$result = file_get_contents( $url, false, $context );
-$response = json_decode( $result );
+// $url = "https://select2web-autobot-test.herokuapp.com/register_by_idcard";
+// $context  = stream_context_create( $options );
+// $result = file_get_contents( $url, false, $context );
+// $response = json_decode( $result );
 
 
 
@@ -62,12 +62,12 @@ $jsonFlex = [
       "contents"=> [
         [
           "type"=> "text",
-          "text"=> "เลขบัตรประชาชน",
+          "text"=> $data,
           "align"=> "center",
           "action"=> [
             "type"=> "message",
-            "label"=> "hello",
-            "text"=> "hello"
+            "label"=> $data,
+            "text"=> $data
           ]
         ]
       ]
