@@ -12,6 +12,11 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 
+$cookie_name = "user";
+$cookie_value = "00";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+
 http_response_code(200);
 
 // --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
@@ -37,9 +42,6 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $payment_type = 1;
     
 
-  $cookie_name = "user";
-  $cookie_value = "1";
-  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
   // $arrPostData['messages'][0]['type'] = "image";
   // $arrPostData['messages'][0]['originalContentUrl'] = $image_url;
