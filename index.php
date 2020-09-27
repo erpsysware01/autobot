@@ -62,7 +62,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $data2=$arrJson['events'][0]['message']['text'];   
 
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "123"; 
+  $arrPostData['messages'][0]['text'] = "12344"; 
   
   // $data_api = array(
   //   'id_card'      => $data,
