@@ -43,51 +43,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][1]['type'] = "text";
   $arrPostData['messages'][1]['text'] ="กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลัก นะครับ";
 
-//**********************************************************ค่ายืนยันสิทธิ์นักเรียนใหม่******************************* */
 
-}else if($arrJson['events'][0]['message']['text']=="ค่ายืนยันสิทธิ์นักเรียนใหม่"){ 
-
-  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
-  
-
-  $data_api = array(
-    'id_line' => $id_line
-  );
-
-  $options = array(
-    'http' => array(
-      'method'  => 'POST',
-      'content' => json_encode( $data_api ),
-      'header'=>  "Content-Type: application/json\r\n" .
-                  "Accept: application/json\r\n"
-      )
-  );
-  $url = "https://ff8c0a85c27f.ngrok.io/PHP-Slim-Restful/api/qrcodememberdata";
-  $context  = stream_context_create( $options );
-  $result = file_get_contents( $url, false, $context );
-  $response = json_decode( $result );
-
-  
-    if($response->flg_response == 1){
-      
-    $tank="";
-    $arrPostData = array();
-     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-     $arrPostData['messages'][0]['type'] = "image";
-     $arrPostData['messages'][0]['originalContentUrl'] = $tank;
-     $arrPostData['messages'][0]['previewImageUrl'] =  $tank;
-      
-     
-      
-    }
-    else if($response->flg_response == 0){
-  
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = $response->text_respons; 
-
-    }
 //**********************************************************เลขบัตรประชาชน******************************* */
 
 
@@ -140,7 +96,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else  if($response->database !== 'CONNECTED'){
+ else if($response->database !== 'CONNECTED'){
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
