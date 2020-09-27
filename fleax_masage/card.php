@@ -33,358 +33,47 @@ $response = json_decode( $result );
 
 $jsonFlex = [
   
-  
-    "type"=> "flex",
-    "altText"=> "Flex Message",
-    "contents"=> [
-      "type"=> "carousel",
+  "type"=> "flex",
+  "altText"=> "Flex Message",
+  "contents"=> [
+    "type"=> "bubble",
+    "direction"=> "ltr",
+    "header"=> [
+      "type"=> "box",
+      "layout"=> "vertical",
       "contents"=> [
         [
-          "type"=> "bubble",
-          "hero"=> [
-            "type"=> "image",
-            "url"=> "https://raw.githubusercontent.com/aicit2015/picture/master/85040573_618997342220590_2508326321805852672_o.jpg",
-            "size"=> "full",
-            "aspectRatio"=> "20:13",
-            "aspectMode"=> "cover"
-          ],
-          "body"=> [
-            "type"=> "box",
-            "layout"=> "vertical",
-            "spacing"=> "sm",
-            "contents"=> [
-              [
-                "type"=> "box",
-                "layout"=> "vertical",
-                "contents"=> [
-                  [
-                    "type"=> "text",
-                    "text"=> "ลงทะเบียนสำเร็จ ",
-                    "size"=> "xl",
-                    "align"=> "center",
-                    "weight"=> "bold",
-                    "color"=> "#6E9427",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "text",
-                "text"=> "_________________",
-                "margin"=> "none",
-                "size"=> "xl",
-                "align"=> "center",
-                "color"=> "#6E9427",
-                "wrap"=> true
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "ชื่่อ-สกุล :",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "ค่ายืนยันสิทธิ์นักเรียนใหม่",
-                    "flex"=> 0,
-                    "margin"=> "lg",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "color"=> "#625858",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "ID CARD : ",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "1819900608446",
-                    "flex"=> 0,
-                    "margin"=> "md",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "gravity"=> "top",
-                    "weight"=> "regular",
-                    "color"=> "#514848"
-                  ]
-                ]
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "เลขที่บัตร : ",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "hello5555555555",
-                    "flex"=> 0,
-                    "margin"=> "xxl",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "gravity"=> "top",
-                    "weight"=> "regular",
-                    "color"=> "#1941F9"
-                  ]
-                ]
-              ],
-              [
-                "type"=> "text",
-                "text"=> "_________________",
-                "margin"=> "none",
-                "size"=> "xl",
-                "align"=> "center",
-                "color"=> "#6E9427",
-                "wrap"=> true
-              ]
-            ]
-          ],
-          "footer"=> [
-            "type"=> "box",
-            "layout"=> "vertical",
-            "flex"=> 9,
-            "spacing"=> "xxl",
-            "margin"=> "xxl",
-            "contents"=> [
-              [
-                "type"=> "image",
-                "url"=> "https://raw.githubusercontent.com/aicit2015/picture/master/Tick_Mark_Dark-512.png",
-                "margin"=> "none",
-                "aspectRatio"=> "4:3",
-                "aspectMode"=> "fit",
-                "backgroundColor"=> "#FFFFFF"
-              ]
-            ]
-          ]
-        ],
+          "type"=> "text",
+          "text"=> "ค่ายืนยันสิทธิ์นักเรียนใหม่",
+          "align"=> "center"
+        ]
+      ]
+    ],
+    "hero"=> [
+      "type"=> "image",
+      "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
+      "size"=> "full",
+      "aspectRatio"=> "1.51:1",
+      "aspectMode"=> "fit"
+    ],
+    "body"=> [
+      "type"=> "box",
+      "layout"=> "vertical",
+      "contents"=> [
         [
-          "type"=> "bubble",
-          "hero"=> [
-            "type"=> "image",
-            "url"=> "https://raw.githubusercontent.com/aicit2015/picture/master/20140929_4947_1412003472_520885.jpg",
-            "size"=> "full",
-            "aspectRatio"=> "20:13",
-            "aspectMode"=> "cover"
-          ],
-          "body"=> [
-            "type"=> "box",
-            "layout"=> "vertical",
-            "spacing"=> "sm",
-            "contents"=> [
-              [
-                "type"=> "text",
-                "text"=> "คูปองงานเลี้ยงรับรอง",
-                "margin"=> "none",
-                "size"=> "xl",
-                "align"=> "center",
-                "weight"=> "bold",
-                "color"=> "#443973",
-                "wrap"=> true
-              ],
-              [
-                "type"=> "text",
-                "text"=> "_________________",
-                "margin"=> "none",
-                "size"=> "xl",
-                "align"=> "center",
-                "color"=> "#1F9125",
-                "wrap"=> true
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "ชื่่อ-สกุล :",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "hello5555555555",
-                    "flex"=> 0,
-                    "margin"=> "lg",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "color"=> "#5D5353",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "วันที่ ",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "28 มีนาคม 2563  18.00 น.",
-                    "flex"=> 0,
-                    "margin"=> "lg",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "color"=> "#3E3838",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "spacing"=> "none",
-                "margin"=> "none",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "ณ   โรงแรมบีพีสมิหลาบีช สงขลา",
-                    "margin"=> "none",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "color"=> "#110E0E",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "box",
-                "layout"=> "baseline",
-                "contents"=> [
-                  [
-                    "type"=> "icon",
-                    "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png"
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "เลขที่คูปอง :",
-                    "flex"=> 0,
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "wrap"=> true
-                  ],
-                  [
-                    "type"=> "text",
-                    "text"=> "hello5555555555",
-                    "flex"=> 0,
-                    "margin"=> "lg",
-                    "size"=> "md",
-                    "align"=> "start",
-                    "weight"=> "regular",
-                    "color"=> "#0E5AE4",
-                    "wrap"=> true
-                  ]
-                ]
-              ],
-              [
-                "type"=> "text",
-                "text"=> "(ใช้สำหรับลุ้นหางบัตรของขวัญ)",
-                "flex"=> 0,
-                "margin"=> "none",
-                "size"=> "xxs",
-                "align"=> "end",
-                "gravity"=> "center",
-                "color"=> "#FF5551",
-                "wrap"=> true
-              ],
-              [
-                "type"=> "text",
-                "text"=> "_________________",
-                "margin"=> "none",
-                "size"=> "xl",
-                "align"=> "center",
-                "color"=> "#1F9125",
-                "wrap"=> true
-              ]
-            ]
-          ],
-          "footer"=> [
-            "type"=> "box",
-            "layout"=> "vertical",
-            "spacing"=> "sm",
-            "contents"=> [
-              [
-                "type"=> "button",
-                "action"=> [
-                  "type"=> "uri",
-                  "label"=> "คลิกดูสถานที่จัดงาน",
-                  "uri"=> "https://www.google.co.th/maps/place/BP+Samila+Beach+Hotel/@7.2142789,100.5940489,17z/data=!4m8!3m7!1s0x304d3369b9810b35:0xe3e28a4d93d7902a!5m2!4m1!1i2!8m2!3d7.214279!4d100.5962377"
-                ],
-                "flex"=> 2,
-                "color"=> "#BF693B",
-                "style"=> "primary"
-              ]
-            ]
+          "type"=> "text",
+          "text"=> "เลขบัตรประชาชน",
+          "align"=> "center",
+          "action"=> [
+            "type"=> "message",
+            "label"=> "hello",
+            "text"=> "hello"
           ]
         ]
       ]
     ]
-  
-  
+  ]
+   
   ];
 
 if ( sizeof($request_array['events']) > 0 ) {
