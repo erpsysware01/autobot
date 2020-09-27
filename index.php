@@ -49,7 +49,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
  
-  $data=$arrJson['events'][0]['message']['text'];   
+  $data2=$arrJson['events'][0]['message']['text'];   
   
   // $data_api = array(
   //   'id_card'      => $data,
