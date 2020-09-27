@@ -117,7 +117,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
   
   
-  if($response->price == $response->price){
+  if($response->database == 'CONNECTED'){
 
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -140,12 +140,13 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else if($response->price == ''){
+else if($response->database != 'CONNECTED'){
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
+
 }
 
 
