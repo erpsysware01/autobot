@@ -1,4 +1,5 @@
 <?php
+$_SESSION['myName'] = "Johnm";
 
 $channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
 $strAccessToken = "NkNrcU3TLsP3hx2W8TxEMH15/KfQaHLS18n7ewNaPwO7Ngx6fcFhA1cO+QTg7dyFUSk+9XRH6E/wivR5ENkgbbh8FGxx3dge6/ZJYkxdSiDdZkwMaw4zDrSuRnIREOptHFKv/qXmkuSqYbcCbKzcFwdB04t89/1O/w1cDnyilFU=";
@@ -33,7 +34,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อชำระค่ายืนยันสิทธิ์นักเรียนใหม่";
-
+   $payment_type = 1;
   // $arrPostData['messages'][0]['type'] = "image";
   // $arrPostData['messages'][0]['originalContentUrl'] = $image_url;
   // $arrPostData['messages'][0]['previewImageUrl'] = $image_url;
@@ -51,28 +52,28 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
  
   $data2=$arrJson['events'][0]['message']['text'];   
   
-  // $data_api = array(
-  //   'id_card'      => $data,
-  //   'payment_type'  => 2
-  // );
+  $data_api = array(
+    'id_card'      => $data,
+    'payment_type'  => $payment_type
+  );
 
-  // $options = array(
-  //   'http' => array(
-  //     'method'  => 'POST',
-  //     'content' => json_encode( $data_api ),
-  //     'header'=>  "Content-Type: application/json\r\n" .
-  //                 "Accept: application/json\r\n"
-  //     )
-  // );
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
   
-  // $url = "http://103.80.49.95:82/postchkprice/";
-  // $context  = stream_context_create( $options );
-  // $result = file_get_contents( $url, false, $context );
-  // $response = json_decode( $result );
+  $url = "http://103.80.49.95:82/postchkprice/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
 
-  $_SESSION['myName'] = "Johnm";
+  // $_SESSION['myName'] = "Johnm";
   
-  require "fleax_masage/card.php";
+  // require "fleax_masage/card.php";
  
   // if($response->database == 'CONNECTED'){
 
@@ -84,15 +85,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // // $arrPostData['messages'][1]['text'] = "HELLO WORD";
 
   
-  // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = $response->price; 
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $response->price; 
 
   
-  // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = $response->ref2; 
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = $response->ref2; 
 
-  // $arrPostData['messages'][2]['type'] = "text";
-  // $arrPostData['messages'][2]['text'] = $response->ref1; 
+  $arrPostData['messages'][2]['type'] = "text";
+  $arrPostData['messages'][2]['text'] = $response->ref1; 
 
   // $arrPostData['messages'][3]['type'] = "text";
   // $arrPostData['messages'][3]['text'] = "1234"; 
