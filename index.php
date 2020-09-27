@@ -117,14 +117,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
   
   
+  if($response->flg_response == 1){
+
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   // $arrPostData['messages'][0]['type'] = "text";
   // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
   // $arrPostData['messages'][1]['type'] = "text";
   // $arrPostData['messages'][1]['text'] = "HELLO WORD";
-
-
 
   
   $arrPostData['messages'][0]['type'] = "text";
@@ -137,7 +137,16 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][2]['type'] = "text";
   $arrPostData['messages'][2]['text'] = $response->ref1; 
 
+}
 
+    
+else if($response->flg_response == 0){
+
+$arrPostData = array();
+$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+$arrPostData['messages'][0]['type'] = "text";
+$arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
+}
 
 
 
