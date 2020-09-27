@@ -117,7 +117,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
   
   
-  if($response->flg_response == 1){
+  if($response->flg_response == $response->price){
 
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -140,7 +140,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else if($response->flg_response == 0){
+else if($response->flg_response != $response->price){
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
