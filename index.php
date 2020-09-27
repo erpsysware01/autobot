@@ -70,8 +70,10 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // $context  = stream_context_create( $options );
   // $result = file_get_contents( $url, false, $context );
   // $response = json_decode( $result );
+
+  $_SESSION['myName'] = "John";
   
-  require "fleax_masage/card.php?id_card=$data";
+  require "fleax_masage/card.php";
  
   // if($response->database == 'CONNECTED'){
 
