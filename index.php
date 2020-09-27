@@ -49,27 +49,30 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
-  $_SESSION['myName'] = "Johnm";
+  // $_SESSION['myName'] = "Johnm";
   $data2=$arrJson['events'][0]['message']['text'];   
-  
-  $data_api = array(
-    'id_card'      => $data,
-    'payment_type'  => $payment_type
-  );
 
-  $options = array(
-    'http' => array(
-      'method'  => 'POST',
-      'content' => json_encode( $data_api ),
-      'header'=>  "Content-Type: application/json\r\n" .
-                  "Accept: application/json\r\n"
-      )
-  );
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $_SESSION['myName']; 
   
-  $url = "http://103.80.49.95:82/postchkprice/";
-  $context  = stream_context_create( $options );
-  $result = file_get_contents( $url, false, $context );
-  $response = json_decode( $result );
+  // $data_api = array(
+  //   'id_card'      => $data,
+  //   'payment_type'  => $payment_type
+  // );
+
+  // $options = array(
+  //   'http' => array(
+  //     'method'  => 'POST',
+  //     'content' => json_encode( $data_api ),
+  //     'header'=>  "Content-Type: application/json\r\n" .
+  //                 "Accept: application/json\r\n"
+  //     )
+  // );
+  
+  // $url = "http://103.80.49.95:82/postchkprice/";
+  // $context  = stream_context_create( $options );
+  // $result = file_get_contents( $url, false, $context );
+  // $response = json_decode( $result );
 
   // $_SESSION['myName'] = "Johnm";
   
@@ -85,15 +88,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // // $arrPostData['messages'][1]['text'] = "HELLO WORD";
 
   
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $response->price; 
+  // $arrPostData['messages'][0]['type'] = "text";
+  // $arrPostData['messages'][0]['text'] = $response->price; 
 
   
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = $response->ref2; 
+  // $arrPostData['messages'][1]['type'] = "text";
+  // $arrPostData['messages'][1]['text'] = $response->ref2; 
 
-  $arrPostData['messages'][2]['type'] = "text";
-  $arrPostData['messages'][2]['text'] = $response->ref1; 
+  // $arrPostData['messages'][2]['type'] = "text";
+  // $arrPostData['messages'][2]['text'] = $response->ref1; 
 
   // $arrPostData['messages'][3]['type'] = "text";
   // $arrPostData['messages'][3]['text'] = "1234"; 
