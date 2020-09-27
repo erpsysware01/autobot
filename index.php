@@ -140,7 +140,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else if($response->database != 'CONNECTED'){
+else if($response->database !== 'CONNECTED'){
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
