@@ -25,7 +25,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 //**********************************************************ลงทะเบียน****************************************** */
 }else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
-
+  session_start();
   $_SESSION['myName'] = "Johnm";
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
   $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
