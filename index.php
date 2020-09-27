@@ -96,45 +96,46 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $data=$arrJson['events'][0]['message']['text'];   
   
   
-  // $data_api = array(
-  //   'id_card'      => $data
-  // );
+  $data_api = array(
+    'id_card'      => $data,
+    'payment_type'  => 2
+  );
 
-  // $options = array(
-  //   'http' => array(
-  //     'method'  => 'POST',
-  //     'content' => json_encode( $data_api ),
-  //     'header'=>  "Content-Type: application/json\r\n" .
-  //                 "Accept: application/json\r\n"
-  //     )
-  // );
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
   
-  // $url = "https://aiconline.assiddeek.net/PHP-Slim-Restful/api/register_by_idcard";
-  // $context  = stream_context_create( $options );
-  // $result = file_get_contents( $url, false, $context );
-  // $response = json_decode( $result );
+  $url = "http://103.80.49.95:82/postchkprice/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
   
   
   
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "HELLO WORD";
-
-
-
-  
   // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = $response->text_respons; 
+  // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
+  // $arrPostData['messages'][1]['type'] = "text";
+  // $arrPostData['messages'][1]['text'] = "HELLO WORD";
+
+
 
   
-  // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = $response->member_no; 
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $response->price; 
 
-  // $arrPostData['messages'][2]['type'] = "text";
-  // $arrPostData['messages'][2]['text'] = $response->text_status; 
+  
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = $response->ref2; 
+
+  $arrPostData['messages'][2]['type'] = "text";
+  $arrPostData['messages'][2]['text'] = $response->ref1; 
 
 
 
