@@ -23,7 +23,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 //**********************************************************ลงทะเบียน****************************************** */
-}else if($arrJson['events'][0]['message']['text'] == "ลงทะเบียน"){
+}else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
 
 
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
@@ -31,12 +31,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-  //  $arrPostData['messages'][0]['type'] = "text";
-  //  $arrPostData['messages'][0]['text'] = "อัสสาลามูอาลัยกุม";
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อชำระค่ายืนยันสิทธิ์นักเรียนใหม่";
 
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = $image_url;
-  $arrPostData['messages'][0]['previewImageUrl'] = $image_url;
+  // $arrPostData['messages'][0]['type'] = "image";
+  // $arrPostData['messages'][0]['originalContentUrl'] = $image_url;
+  // $arrPostData['messages'][0]['previewImageUrl'] = $image_url;
   // replyMsg($arrHeader,$arrPostData);
 
   
