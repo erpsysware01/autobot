@@ -51,7 +51,6 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
  
   $data=$arrJson['events'][0]['message']['text'];   
   
-  
   // $data_api = array(
   //   'id_card'      => $data,
   //   'payment_type'  => 2
@@ -71,7 +70,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // $result = file_get_contents( $url, false, $context );
   // $response = json_decode( $result );
 
-  $_SESSION['myName'] = "John";
+  $_SESSION['myName'] = "Johnm";
   
   require "fleax_masage/card.php";
  
