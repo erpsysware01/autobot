@@ -1,5 +1,5 @@
 <?php
-
+$data=$_REQUEST["id_card"];
 $API_URL = 'https://api.line.me/v2/bot/message';
 $channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
 $ACCESS_TOKEN = "NkNrcU3TLsP3hx2W8TxEMH15/KfQaHLS18n7ewNaPwO7Ngx6fcFhA1cO+QTg7dyFUSk+9XRH6E/wivR5ENkgbbh8FGxx3dge6/ZJYkxdSiDdZkwMaw4zDrSuRnIREOptHFKv/qXmkuSqYbcCbKzcFwdB04t89/1O/w1cDnyilFU=";
@@ -9,7 +9,7 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $content = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($content , true);   // Decode JSON to Array
 
-$data=$_REQUEST["id_card"];
+
 // $data_api = array(
 //   'id_card'      => $data
 // );
@@ -66,8 +66,8 @@ $jsonFlex = [
           "align"=> "center",
           "action"=> [
             "type"=> "message",
-            "label"=> $data,
-            "text"=> $data
+            "label"=> "5555",
+            "text"=> "555"
           ]
         ]
       ]
