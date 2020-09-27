@@ -26,7 +26,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 //**********************************************************ลงทะเบียน****************************************** */
 }else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
   session_start();
-  $_SESSION['myName'] = "Johnm";
+  //$_SESSION['myName'] = "Johnm";
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
   $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
   $arrPostData = array();
@@ -35,6 +35,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อชำระค่ายืนยันสิทธิ์นักเรียนใหม่";
    $payment_type = 1;
+    
+
+  $cookie_name = "user";
+  $cookie_value = "1";
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
   // $arrPostData['messages'][0]['type'] = "image";
   // $arrPostData['messages'][0]['originalContentUrl'] = $image_url;
   // $arrPostData['messages'][0]['previewImageUrl'] = $image_url;
@@ -50,11 +56,11 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   // $_SESSION['myName'] = "Johnm";
-  echo $_SESSION['myName'];
+  //echo $_SESSION['myName'];
   $data2=$arrJson['events'][0]['message']['text'];   
 
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = $payment_type ; 
+  $arrPostData['messages'][0]['text'] = $_COOKIE[$cookie_name] ; 
   
   // $data_api = array(
   //   'id_card'      => $data,
