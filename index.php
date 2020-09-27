@@ -73,7 +73,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
   
   
-  if($response->database == 'CONNECTED'){
+  // if($response->database == 'CONNECTED'){
 
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -93,17 +93,17 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][2]['type'] = "text";
   $arrPostData['messages'][2]['text'] = $response->ref1; 
 
-}
+// }
 
     
- else if($response->database !== 'CONNECTED'){
+//  else if($response->database !== 'CONNECTED'){
 
-$arrPostData = array();
-$arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-$arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
+// $arrPostData = array();
+// $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+// $arrPostData['messages'][0]['type'] = "text";
+// $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
 
-}
+// }
 
 
 
