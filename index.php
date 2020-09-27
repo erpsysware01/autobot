@@ -11,7 +11,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-session_start();
+//session_start();
 // $cookie_name = "user";
 // $cookie_value = "00";
 // setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 //**********************************************************ลงทะเบียน****************************************** */
 }else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
-  $_SESSION["favcolor"] = "green";
+  //$_SESSION["favcolor"] = "green";
   //$_SESSION['myName'] = "Johnm";
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
   $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
@@ -59,6 +59,8 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   // $_SESSION['myName'] = "Johnm";
   //echo $_SESSION['myName'];
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $data2=$arrJson['events'][0]['message']['text'];   
 
   $arrPostData['messages'][0]['type'] = "text";
