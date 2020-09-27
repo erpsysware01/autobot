@@ -96,7 +96,7 @@ $jsonFlex = [
                   ],
                   [
                     "type"=> "text",
-                    "text"=> "hello5555555555",
+                    "text"=> "ค่ายืนยันสิทธิ์นักเรียนใหม่",
                     "flex"=> 0,
                     "margin"=> "lg",
                     "size"=> "md",
@@ -126,7 +126,7 @@ $jsonFlex = [
                   ],
                   [
                     "type"=> "text",
-                    "text"=> "hello5555555555",
+                    "text"=> "1819900608446",
                     "flex"=> 0,
                     "margin"=> "md",
                     "size"=> "md",
