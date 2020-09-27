@@ -93,6 +93,11 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][2]['type'] = "text";
   $arrPostData['messages'][2]['text'] = $response->ref1; 
 
+  $arrPostData['messages'][2]['type'] = "text";
+  $arrPostData['messages'][2]['text'] =strlen($arrJson['events'][1]['message']['text']; 
+
+  
+
 // }
 
     
