@@ -40,8 +40,8 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // replyMsg($arrHeader,$arrPostData);
 
   
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] ="กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลัก นะครับ";
+  // $arrPostData['messages'][1]['type'] = "text";
+  // $arrPostData['messages'][1]['text'] ="กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลัก นะครับ";
 
 
 //**********************************************************เลขบัตรประชาชน******************************* */
