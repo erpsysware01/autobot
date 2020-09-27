@@ -1,5 +1,5 @@
 <?php
-$_SESSION['myName'] = "Johnm";
+
 
 $channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
 $strAccessToken = "NkNrcU3TLsP3hx2W8TxEMH15/KfQaHLS18n7ewNaPwO7Ngx6fcFhA1cO+QTg7dyFUSk+9XRH6E/wivR5ENkgbbh8FGxx3dge6/ZJYkxdSiDdZkwMaw4zDrSuRnIREOptHFKv/qXmkuSqYbcCbKzcFwdB04t89/1O/w1cDnyilFU=";
@@ -26,7 +26,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 //**********************************************************ลงทะเบียน****************************************** */
 }else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
 
-
+  $_SESSION['myName'] = "Johnm";
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
   $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
   $arrPostData = array();
@@ -49,7 +49,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
- 
+  $_SESSION['myName'] = "Johnm";
   $data2=$arrJson['events'][0]['message']['text'];   
   
   $data_api = array(
