@@ -140,7 +140,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else if($response->price !== $response->price){
+else{
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
