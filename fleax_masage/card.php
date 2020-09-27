@@ -65,7 +65,7 @@ $jsonFlex = [
       "contents"=> [
         [
           "type"=> "text",
-          "text"=> $data,
+          "text"=> $data2,
           "align"=> "center",
           "action"=> [
             "type"=> "message",
