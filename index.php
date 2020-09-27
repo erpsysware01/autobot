@@ -140,7 +140,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 }
 
     
-else {
+else  if($response->database !== 'CONNECTED'){
 
 $arrPostData = array();
 $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -148,7 +148,7 @@ $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
 
 }
-// if($response->database  'CONNECTED')
+
 
 
 //**********************************************************ลูบสุดท้าย******************************************* */
