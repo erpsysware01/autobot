@@ -38,7 +38,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อชำระค่ายืนยันสิทธิ์นักเรียนใหม่";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้าง QR Code";
    $payment_type = 1;
     
 
@@ -57,6 +57,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
+  
   $_SESSION['myName'] = "Johnm";
   $data2=$arrJson['events'][0]['message']['text'];  
 
