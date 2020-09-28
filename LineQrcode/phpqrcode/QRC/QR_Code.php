@@ -7,10 +7,10 @@
  $Bantan="|099400009375600";
  $ref1="1800801571929";
  $ref2="001011010001";
- $price="500.00";
+ $price="500";
 
 
 include('../qrlib.php'); 
-QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price.00);
+QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price.'00');
 
 ?>
