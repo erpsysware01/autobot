@@ -57,14 +57,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
-  // $_SESSION['myName'] = "Johnm";
+  $_SESSION['myName'] = "Johnm";
   //echo $_SESSION['myName'];
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $data2=$arrJson['events'][0]['message']['text'];   
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  // $data2=$arrJson['events'][0]['message']['text'];   
 
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "12344"; 
+  // $arrPostData['messages'][0]['type'] = "text";
+  // $arrPostData['messages'][0]['text'] = "12344"; 
   
   // $data_api = array(
   //   'id_card'      => $data,
@@ -87,7 +87,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
   // $_SESSION['myName'] = "Johnm";
   
-  // require "fleax_masage/card.php";
+  require "fleax_masage/card.php";
  
   // if($response->database == 'CONNECTED'){
 
