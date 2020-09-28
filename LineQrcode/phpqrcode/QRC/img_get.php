@@ -3,12 +3,13 @@
 // $ref1 = $_POST['ref1'];
 // $ref2 = $_POST['ref2'];
 //$flg = $_POST['flg'];    // 1 = เงินฝาก ,2 = หุุ้้น ,3 = สินเชื่อ
-$account_no=$_REQUEST["account_no"];
-$ID_no=$_REQUEST["ID_no"];
-$acc_name=$_REQUEST["name"];
+$ref1=$_REQUEST["ref1"];
+$ref2=$_REQUEST["ref2"];
+$price=$_REQUEST["price"];
+
+
 
 $var = urldecode($acc_name); // url ตัวเปลี่ยนภาษาไทย
-
 
 $image = imagecreatetruecolor(1792,2800);
 $black = imagecolorallocate($image,0,0,0);
@@ -23,7 +24,7 @@ $overlayImage_bg = imagecreatefrompng('bg_saving.png');
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
 
-$src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/QRC_save.php?account_no=$account_no&&ID_no=$ID_no";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/bg_loan.png?ref1=$ref1&&ref2=$ref2&&price=$price";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
 $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
