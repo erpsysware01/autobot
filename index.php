@@ -305,23 +305,26 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // require "fleax_masage/card.php";
 
 
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "HELLO WORD";
-
-  
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = $response->price; 
+  // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758"; 
+  // $arrPostData['messages'][1]['type'] = "text";
+  // $arrPostData['messages'][1]['text'] = "HELLO WORD";
+
+
+  $name =urlencode($response->acc_name);
+  $name =urlencode($response->acc_name);
+  $name =urlencode($response->acc_name);
+
+  $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/bg_loan.png";
+   $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
+  $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
 
   
-  // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = $response->ref2; 
-
-  // $arrPostData['messages'][2]['type'] = "text";
-  // $arrPostData['messages'][2]['text'] = $response->ref1; 
 
 
 //**********************************************************ลูบสุดท้าย******************************************* */
