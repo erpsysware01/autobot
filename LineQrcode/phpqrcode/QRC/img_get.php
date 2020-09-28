@@ -1,8 +1,6 @@
 <?php
 
-// $ref1 = $_POST['ref1'];
-// $ref2 = $_POST['ref2'];
-//$flg = $_POST['flg'];    // 1 = เงินฝาก ,2 = หุุ้้น ,3 = สินเชื่อ
+
 $ref1=$_REQUEST["ref1"];
 $ref2=$_REQUEST["ref2"];
 $price=$_REQUEST["price"];
