@@ -311,11 +311,19 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758"; 
   // $arrPostData['messages'][1]['type'] = "text";
   // $arrPostData['messages'][1]['text'] = "HELLO WORD";
+ 
+  
+    // ค่าที่ต้องส่งไป
+      // $response->ref1//QRC //BG
+      // $response->ref2//QRC
+      // $response->price//QRC //BG
+      
+      // $response->payment_type_name// BG 
+      // $response->student_name// BG 
 
 
-  $name =urlencode($response->acc_name);
-  $name =urlencode($response->acc_name);
-  $name =urlencode($response->acc_name);
+  $payment_type_name1 =urlencode($response->payment_type_name);
+  $student_name1 =urlencode($response->student_name);
 
   $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/bg_loan.png";
    $arrPostData = array();
