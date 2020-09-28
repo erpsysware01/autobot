@@ -61,6 +61,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่ายืนยันสิทธิ์นักเรียนใหม่";
+
   
     
 /**********************************************************ค่าธรรมเนียมเทอม 1****************************************** */
@@ -168,7 +169,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าธรรมเนียมรายเดือน";
 
 
-   /********************************************************** ค่าเรียนหลักสูตร IP****************************************** */
+   /**********************************************************ค่าเรียนหลักสูตร IP****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าเรียนหลักสูตร IP"){
 
@@ -203,7 +204,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าเรียนหลักสูตร IP";
 
 
-   /********************************************************** ค่าใช้จ่ายส่วนตัวรายวัน****************************************** */
+   /**********************************************************ค่าใช้จ่ายส่วนตัวรายวัน****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าใช้จ่ายส่วนตัวรายวัน"){
 
@@ -237,7 +238,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าใช้จ่ายส่วนตัวรายวัน";
 
-   /********************************************************** ค่าใช้จ่ายอื่นๆ****************************************** */
+   /**********************************************************ค่าใช้จ่ายอื่นๆ****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าใช้จ่ายอื่นๆ"){
 
@@ -272,83 +273,55 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าใช้จ่ายอื่นๆ";
 
 
-//**********************************************************เลขบัตรประชาชน******************************* */
+ //**********************************************************ค่ายืนยันสิทธิ์นักเรียนใหม่ เลขบัตรประชาชน******************************* */
 
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   
-  $_SESSION['myName'] = "Johnm";
-  $data2=$arrJson['events'][0]['message']['text'];  
-
- 
-  //echo $_SESSION['myName'];
-  // $arrPostData = array();
-  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-   
-
-  // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = "12344"; 
+  $data=$arrJson['events'][0]['message']['text']; 
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
   
-  // $data_api = array(
-  //   'id_card'      => $data,
-  //   'payment_type'  => $payment_type
-  // );
 
-  // $options = array(
-  //   'http' => array(
-  //     'method'  => 'POST',
-  //     'content' => json_encode( $data_api ),
-  //     'header'=>  "Content-Type: application/json\r\n" .
-  //                 "Accept: application/json\r\n"
-  //     )
-  // );
+  $data_api = array(
+    'id_card'      => $data,
+    'id_line'  => $id_line
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
   
-  // $url = "http://103.80.49.95:82/postchkprice/";
-  // $context  = stream_context_create( $options );
-  // $result = file_get_contents( $url, false, $context );
-  // $response = json_decode( $result );
+  $url = "http://103.80.49.95:82/postchkprice/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
 
   // $_SESSION['myName'] = "Johnm";
-  
-  require "fleax_masage/card.php";
- 
-  // if($response->database == 'CONNECTED'){
+  // require "fleax_masage/card.php";
 
-  // $arrPostData = array();
-  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  // // $arrPostData['messages'][0]['type'] = "text";
-  // // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
-  // // $arrPostData['messages'][1]['type'] = "text";
-  // // $arrPostData['messages'][1]['text'] = "HELLO WORD";
 
-  
-  // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = $response->price; 
-
-  
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758";    //รหัสบัตรประชาชน********
   // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = $response->ref2; 
-
-  // $arrPostData['messages'][2]['type'] = "text";
-  // $arrPostData['messages'][2]['text'] = $response->ref1; 
-
-  // $arrPostData['messages'][3]['type'] = "text";
-  // $arrPostData['messages'][3]['text'] = "1234"; 
+  // $arrPostData['messages'][1]['text'] = "HELLO WORD";
 
   
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = $response->price; 
 
-// }
+  
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = $response->ref2; 
 
-    
-//  else if($response->database !== 'CONNECTED'){
-
-// $arrPostData = array();
-// $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-// $arrPostData['messages'][0]['type'] = "text";
-// $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูล"; 
-
-// }
-
+  $arrPostData['messages'][2]['type'] = "text";
+  $arrPostData['messages'][2]['text'] = $response->ref1; 
 
 
 //**********************************************************ลูบสุดท้าย******************************************* */
