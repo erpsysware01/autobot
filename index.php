@@ -29,7 +29,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 //**********************************************************ลงทะเบียน****************************************** */
-}else if($arrJson['events'][0]['message']['text'] == "ค่ายืนยันสิทธิ์นักเรียนใหม่"){
+}else if($arrJson['events'][0]['message']['text'] == "สร้าง QR Code ของนักเรียน"){
   //$_SESSION["favcolor"] = "green";
   //$_SESSION['myName'] = "Johnm";
   $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
