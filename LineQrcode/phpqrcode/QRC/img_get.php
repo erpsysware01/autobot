@@ -1,13 +1,19 @@
 <?php
 
-
-$ref1=$_REQUEST["ref1"];
+//--------------ส่งต่อ QRC ----------------
+$ref1=$_REQUEST["ref1"]; //use
 $ref2=$_REQUEST["ref2"];
-$price=$_REQUEST["price"];
+$price=$_REQUEST["price"]; //use
+// ---------------- BG -----------------------
+
+$payment_type_name=$_REQUEST["payment_type_name"];
+$student_name=$_REQUEST["student_name"];
+
+// ---------------- BG -----------------------
+$payment_type_name1 = urldecode($payment_type_name); // url ตัวเปลี่ยนภาษาไทย
+$student_name1 = urldecode($student_name);  // url ตัวเปลี่ยนภาษาไทย
 
 
-
-$var = urldecode($acc_name); // url ตัวเปลี่ยนภาษาไทย
 
 $image = imagecreatetruecolor(1792,2800);
 $black = imagecolorallocate($image,0,0,0);
