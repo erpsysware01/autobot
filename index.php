@@ -58,10 +58,13 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   $_SESSION['myName'] = "Johnm";
+  $data2=$arrJson['events'][0]['message']['text'];  
+
+
   //echo $_SESSION['myName'];
   // $arrPostData = array();
   // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  // $data2=$arrJson['events'][0]['message']['text'];   
+   
 
   // $arrPostData['messages'][0]['type'] = "text";
   // $arrPostData['messages'][0]['text'] = "12344"; 
