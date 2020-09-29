@@ -11,10 +11,6 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-//session_start();
-// $cookie_name = "user";
-// $cookie_value = "00";
-// setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
 
 http_response_code(200);
@@ -28,9 +24,9 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 // --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
 
 //**********************************************************ค่าเทอม****************************************** */
-if($arrJson['events'][0]['message']['text'] == "ค่าธรรมเนียมรายเทอม" ){
+// if($arrJson['events'][0]['message']['text'] == "ค่าธรรมเนียมรายเทอม" ){
   
-   require "fleax_masage/card.php";
+//    require "fleax_masage/card.php";
 
 
 //**********************************************************ค่ายืนยันสิทธิ์นักเรียนใหม่****************************************** */
