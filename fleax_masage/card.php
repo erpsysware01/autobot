@@ -37,7 +37,7 @@ $jsonFlex = [
   "altText"=> "ค่าใช้จ่ายรายเทอม",
   "baseSize"=> [
     "width"=> 1040,
-    "height"=> 769
+    "height"=> 1040
   ],
   "actions"=> [
     [
