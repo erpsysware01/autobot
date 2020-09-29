@@ -36,8 +36,8 @@ $jsonFlex = [
   "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/900?_ignored=",
   "altText"=> "ค่าใช้จ่ายรายเทอม",
   "baseSize"=> [
-    "width"=> 1040,
-    "height"=> 1040
+    "width"=> 2000,
+    "height"=> 769
   ],
   "actions"=> [
     [
