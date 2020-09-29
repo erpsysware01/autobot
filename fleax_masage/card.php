@@ -34,10 +34,10 @@ $request_array = json_decode($content , true);   // Decode JSON to Array
 $jsonFlex = [
   "type"=> "imagemap",
   "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/900?_ignored=",
-  "altText"=> "ค่าใช้จ่ายรายเทอม",
+  "altText"=> "ค่าใช้จ่ายรายเดือน",
   "baseSize"=> [
-    "width"=> 694,
-    "height"=> 513
+    "width"=> 1040,
+    "height"=> 769
   ],
   "actions"=> [
     [
