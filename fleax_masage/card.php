@@ -32,8 +32,7 @@ $request_array = json_decode($content , true);   // Decode JSON to Array
 
 
 $jsonFlex = [
-  
-  "type"=> "ค่าใช้จ่ายรายเทอม",
+  "type"=> "imagemap",
   "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/900?_ignored=",
   "altText"=> "This is an imagemap",
   "baseSize"=> [
@@ -61,9 +60,8 @@ $jsonFlex = [
       ],
       "text"=> "ค่าธรรมเนียมเทอม 2"
     ]
-  
-   
-  ];
+  ]
+];
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
