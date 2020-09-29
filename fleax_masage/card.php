@@ -1,7 +1,4 @@
 <?php
-// $data=$_REQUEST["id_card"];
-
-echo $_SESSION['myName'];
 
 $API_URL = 'https://api.line.me/v2/bot/message';
 $channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
@@ -36,44 +33,33 @@ $request_array = json_decode($content , true);   // Decode JSON to Array
 
 $jsonFlex = [
   
-  "type"=> "flex",
-  "altText"=> "Flex Message",
-  "contents"=> [
-    "type"=> "bubble",
-    "direction"=> "ltr",
-    "header"=> [
-      "type"=> "box",
-      "layout"=> "vertical",
-      "contents"=> [
-        [
-          "type"=> "text",
-          "text"=> "ค่ายืนยันสิทธิ์นักเรียนใหม่",
-          "align"=> "center"
-        ]
-      ]
+  "type"=> "ค่าใช้จ่ายรายเทอม",
+  "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/900?_ignored=",
+  "altText"=> "This is an imagemap",
+  "baseSize"=> [
+    "width"=> 1040,
+    "height"=> 769
+  ],
+  "actions"=> [
+    [
+      "type"=> "message",
+      "area"=> [
+        "x"=> 2,
+        "y"=> 12,
+        "width"=> 503,
+        "height"=> 724
+      ],
+      "text"=> "ค่าธรรมเนียมเทอม 1"
     ],
-    "hero"=> [
-      "type"=> "image",
-      "url"=> "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
-      "size"=> "full",
-      "aspectRatio"=> "1.51:1",
-      "aspectMode"=> "fit"
-    ],
-    "body"=> [
-      "type"=> "box",
-      "layout"=> "vertical",
-      "contents"=> [
-        [
-          "type"=> "text",
-          "text"=> $data2,
-          "align"=> "center",
-          "action"=> [
-            "type"=> "message",
-            "label"=> "5555",
-            "text"=> "555"
-          ]
-        ]
-      ]
+    [
+      "type"=> "message",
+      "area"=> {
+        "x"=> 537,
+        "y"=> 14,
+        "width"=> 493,
+        "height"=> 720
+      ],
+      "text"=> "ค่าธรรมเนียมเทอม 2"
     ]
   ]
    
