@@ -28,6 +28,11 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
    require "fleax_masage/card.php";
 
+
+  }else if($arrJson['events'][0]['message']['text'] == "ค่าใช้จ่ายอื่นๆ." ){
+  
+    require "fleax_masage/card1.php";
+
    
 
 
