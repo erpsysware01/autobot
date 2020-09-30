@@ -33,11 +33,19 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   
     require "fleax_masage/card1.php";
 
+
+
+  }else if($arrJson['events'][0]['message']['text'] == " วากัฟ/ซากาต/ซอดาเกาะฮ" ){
+  
+    require "fleax_masage/card2.php";
+
+
+
+  }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนองค์กรในสังกัดปอเนาะบ้านตาล" ){
+  
+    require "fleax_masage/card3.php";
+
    
-
-
-
-
 
 
 //**********************************************************ค่ายืนยันสิทธิ์นักเรียนใหม่****************************************** */
