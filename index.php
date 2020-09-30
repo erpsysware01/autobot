@@ -35,7 +35,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 
-  }else if($arrJson['events'][0]['message']['text'] == " วากัฟ/ซากาต/ซอดาเกาะฮ" ){
+  }else if($arrJson['events'][0]['message']['text'] == "วากัฟ/ซากาต/ซอดาเกาะฮ" ){
   
     require "fleax_masage/card2.php";
 
