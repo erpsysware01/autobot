@@ -53,7 +53,7 @@ $jsonFlex = [
     ],
     [
       "type"=> "message",
-      "area"=> {
+      "area"=> [
         "x"=> 529,
         "y"=> 9,
         "width"=> 511,
