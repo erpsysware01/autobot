@@ -33,8 +33,8 @@ $request_array = json_decode($content , true);   // Decode JSON to Array
 
 $jsonFlex = [
   "type"=> "imagemap",
-  "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/700?_ignored=",
-  "altText"=> "ค่าใช้จ่ายรายเดือน",
+  "baseUrl"=> "https://select2web-autobot-bantan.herokuapp.com/imagemap/200?_ignored=",
+  "altText"=> "ค่าธรรมเนียมการเรียน",
   "baseSize"=> [
     "width"=> 1040,
     "height"=> 769
@@ -43,22 +43,42 @@ $jsonFlex = [
     [
       "type"=> "message",
       "area"=> [
-        "x"=> 2,
-        "y"=> 12,
-        "width"=> 503,
-        "height"=> 724
+        "x"=> 0,
+        "y"=> 4,
+        "width"=> 484,
+        "height"=> 372
+      ],
+      "text"=> "ค่ายืนยันสิทธิ์นักเรียนใหม่"
+    ],
+    [
+      "type"=> "message",
+      "area"=> [
+        "x"=> 502,
+        "y"=> 4,
+        "width"=> 538,
+        "height"=> 370
       ],
       "text"=> "ค่าธรรมเนียมเทอม 1"
     ],
     [
       "type"=> "message",
       "area"=> [
-        "x"=> 537,
-        "y"=> 14,
-        "width"=> 493,
-        "height"=> 720
+        "x"=> 2,
+        "y"=> 396,
+        "width"=> 484,
+        "height"=> 373
       ],
       "text"=> "ค่าธรรมเนียมเทอม 2"
+    ],
+    [
+      "type"=> "message",
+      "area"=> [
+        "x"=> 504,
+        "y"=> 402,
+        "width"=> 535,
+        "height"=> 365
+      ],
+      "text"=> "ค่าเรียนหลักสูตร IP"
     ]
   ]
 ];
