@@ -35,15 +35,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
 
-  // }else if($arrJson['events'][0]['message']['text'] == "วากัฟ/ซากาต/ซอดาเกาะฮ" ){
+  }else if($arrJson['events'][0]['message']['text'] == "วากัฟ/ซากาต/ซอดาเกาะฮ" ){
   
-  //   require "fleax_masage/card2.php";
+    require "fleax_masage/card2.php";
 
 
 
-  // }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนองค์กรในสังกัดปอเนาะบ้านตาล" ){
+  }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนองค์กรในสังกัดปอเนาะบ้านตาล" ){
   
-  //   require "fleax_masage/card3.php";
+    require "fleax_masage/card3.php";
 
    
 
