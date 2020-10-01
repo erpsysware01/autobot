@@ -477,11 +477,11 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       // $response->student_name// BG 
 
 
-  $payment_type_name1 =urlencode($response->payment_type_name);
-  $student_name1 =urlencode($response->student_name);
+  // $payment_type_name1 =urlencode($response->payment_type_name);
+  // $student_name1 =urlencode($response->student_name);
   // https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->text_ref1&&ref2=$response->text_ref2&&name=$name
   $QRC_PNG="http://103.80.49.95:82/LineQrcode/phpqrcode/QRC/bg_loan.png";
-   $arrPostData = array();
+  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
