@@ -311,7 +311,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //1.****************API  */
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -345,7 +345,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //2.****************API  */
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -379,7 +379,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //3.****************API  */
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -413,7 +413,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
