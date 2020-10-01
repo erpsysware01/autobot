@@ -292,6 +292,141 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าใช้จ่ายอื่นๆ";
 
+   /**********************************************************สนับสนุนทุนการศึกษา****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "สนับสนุนทุนการศึกษา"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  $data_api = array(
+    'id_line' => $id_line,
+    'payment_type' => 8
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  
+  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
+  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนทุนการศึกษา";
+
+   /**********************************************************สนับสนุนกองทุนวากัฟ****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "สนับสนุนกองทุนวากัฟ"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  $data_api = array(
+    'id_line' => $id_line,
+    'payment_type' => 9
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  
+  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
+  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนกองทุนวากัฟ";
+
+   /**********************************************************ค่าบำรุงสมาคมศิษย์เก่า****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "ค่าบำรุงสมาคมศิษย์เก่า"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  $data_api = array(
+    'id_line' => $id_line,
+    'payment_type' => 10
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  
+  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
+  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าบำรุงสมาคมศิษย์เก่า";
+
+    /**********************************************************สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  $data_api = array(
+    'id_line' => $id_line,
+    'payment_type' => 10
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //****************API  */
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  
+  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
+  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
 
  //**********************************************************เลขบัตรประชาชน******************************* */
 
