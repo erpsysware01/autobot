@@ -1,6 +1,5 @@
 <?php
 
-
 $channelSecret = '1fff72b7e53cab5f666bf7caacf059f8';
 $strAccessToken = "NkNrcU3TLsP3hx2W8TxEMH15/KfQaHLS18n7ewNaPwO7Ngx6fcFhA1cO+QTg7dyFUSk+9XRH6E/wivR5ENkgbbh8FGxx3dge6/ZJYkxdSiDdZkwMaw4zDrSuRnIREOptHFKv/qXmkuSqYbcCbKzcFwdB04t89/1O/w1cDnyilFU=";
 
@@ -23,7 +22,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][0]['text'] = "ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 // --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
 
-//**********************************************************ค่าเทอม****************************************** */
+//********************************************************** CARD ******************************************************* */
 }else if($arrJson['events'][0]['message']['text'] == "ค่าธรรมเนียมการเรียน" ){
   
    require "fleax_masage/card.php";
