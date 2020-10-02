@@ -402,7 +402,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
   $data_api = array(
     'id_line' => $id_line,
-    'payment_type' => 10
+    'payment_type' => 11
   );
 
   $options = array(
