@@ -483,7 +483,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   // https://select2web-autobot-test.herokuapp.com/imagemap/1.jpg
   // https://103.80.49.95:82/LineQrcode/phpqrcode/QRC/bg_loan.png
   // https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->text_ref1&&ref2=$response->text_ref2&&name=$name
-  $QRC_PNG="https://103.80.49.95/LineQrcode/phpqrcode/QRC/bg_loan.png";
+  $QRC_PNG="http://103.80.49.95:8080/LineQrcode/phpqrcode/QRC/QR_Code.php";
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
