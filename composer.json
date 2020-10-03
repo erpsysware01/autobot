@@ -1,6 +1,6 @@
 {
-    "require-dev": {
-    
-      "ext-gd": "*"
-    }
+    "require": {
+       
+        "gd": "*"
+     }
   }
