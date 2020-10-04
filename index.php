@@ -450,7 +450,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       )
   );
   
-  $url = "http://103.80.49.95:8080/postchkprice/";
+  $url = "http://103.80.49.95:82/postchkprice/";
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );

@@ -45,11 +45,13 @@ $black = imagecolorallocate($image, 0, 0, 0);
 // Replace path by your own font path
 $font = '/opt/lampp/htdocs/class/securimage/ttf/TATSana Chon-Reg.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
-imagettftext($image, 65, 0,900,1950, $grey, $font,"นาย อาลีฟ กะมูนิง ม.101");     //name
-imagettftext($image, 48, 0,900,2025, $grey, $font,"ค่าธรรมเนียมเทอม 1 ปีการศึกษา 2563"); 
-imagettftext($image, 48, 0,900,2025, $grey, $font,"โรงเรียนประทิปศาสน์");
-imagettftext($image, 48, 0,900,2025, $grey, $font,"520.00"); //REF1
-// imagettftext($image, 48, 0,1000,2100, $grey, $font,"005-01-3846");  //REF2   
+imagettftext($image, 65, 0,900,1950, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
+imagettftext($image, 48, 0,900,2025, $grey, $font,"ม.101");         // class_name
+imagettftext($image, 48, 0,900,2025, $grey, $font,"ค่าธรรมเนียมเทอม 1");  //payment_type_name
+imagettftext($image, 48, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
+imagettftext($image, 40, 0,900,2025, $grey, $font,"โรงเรียนประทีปศาสน์"); //school_name
+imagettftext($image, 35, 0,900,2025, $grey, $font,"520.00"); //price
+
 
 
 
