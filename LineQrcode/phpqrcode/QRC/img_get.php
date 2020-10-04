@@ -15,7 +15,7 @@ $student_name1 = urldecode($student_name);  // url ตัวเปลี่ย�
 
 
 
-$image = imagecreatetruecolor(1792,2800);
+$image = imagecreatetruecolor(3000,2800);
 $black = imagecolorallocate($image,0,0,0);
 imagefill($image,0,0,$black);
 
