@@ -8,10 +8,14 @@ $price=$_REQUEST["price"]; //use
 
 $payment_type_name=$_REQUEST["payment_type_name"];
 $student_name=$_REQUEST["student_name"];
+$class_name=$_REQUEST["class_name"];
+$school_name=$_REQUEST["school_name"];
 
 // ---------------- BG -----------------------
 $payment_type_name1 = urldecode($payment_type_name); // url ตัวเปลี่ยนภาษาไทย
 $student_name1 = urldecode($student_name);  // url ตัวเปลี่ยนภาษาไทย
+$class_name1 = urldecode($class_name); // url ตัวเปลี่ยนภาษาไทย
+$school_name1 = urldecode($school_name);  // url ตัวเปลี่ยนภาษาไทย
 
 
 

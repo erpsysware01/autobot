@@ -468,17 +468,22 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
  
   
     // ค่าที่ต้องส่งไป
-      // $response->ref1//QRC //BG
+      // $response->ref1//QRC 
       // $response->ref2//QRC
       // $response->price//QRC //BG
+        
+
+       
 
       // $response->payment_type_name// BG 
       // $response->student_name// BG 
-
+      // $response->class_name// BG 
+      // $response->school_name// BG 
   
       // $payment_type_name1 =urlencode($response->payment_type_name);
       // $student_name1 =urlencode($response->student_name);
-
+      // $class_name1 =urlencode($response->class_name);
+      // $school_name1 =urlencode($response->school_name);
 
   
   $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/img_get.php";
