@@ -49,7 +49,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 // Replace path by your own font path
 $font = '/font/Anakotmai-Light.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
-imagettftext($image, 66, 0,500,1700, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
+imagettftext($image, 66, 0,400,1700, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
 imagettftext($image, 66, 0,900,2025, $grey, $font,"ม.101");         // class_name
 imagettftext($image, 66, 0,900,2025, $grey, $font,"ค่าธรรมเนียมเทอม 1");  //payment_type_name
 imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
