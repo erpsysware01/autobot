@@ -53,8 +53,8 @@ imagettftext($image, 63, 0,350,1750, $grey, $font,"นาย อาลีฟ ก
 imagettftext($image, 50, 0,350,1880, $grey, $font,"ม.101");         // class_name
 imagettftext($image, 50, 0,720,1880, $grey, $font,"ค่าธรรมเนียมเทอม 1");  //payment_type_name
 // imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
-imagettftext($image, 50, 0,700,2000, $grey, $font,"โรงเรียนประทีปศาสน์"); //school_name
-imagettftext($image, 70, 0,720,2270, $grey, $font,"520.00"); //price
+imagettftext($image, 50, 0,670,2000, $grey, $font,"โรงเรียนประทีปศาสน์"); //school_name
+imagettftext($image, 70, 0,720,2230, $grey, $font,"520.00"); //price
 
 
 
