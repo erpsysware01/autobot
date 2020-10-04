@@ -472,9 +472,6 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       // $response->ref2//QRC
       // $response->price//QRC //BG
         
-
-       
-
       // $response->payment_type_name// BG 
       // $response->student_name// BG 
       // $response->class_name// BG 
