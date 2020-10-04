@@ -47,7 +47,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 
 // $text = 'Testing...66666666666666666666666666666666666666666666666666';
 // Replace path by your own font path
-$font = '/opt/lampp/htdocs/class/securimage/ttf/TATSana Chon-Reg.otf';
+$font = '/font/Anakotmai-Bold.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
 imagettftext($image, 65, 0,900,1950, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
 imagettftext($image, 48, 0,900,2025, $grey, $font,"ม.101");         // class_name
