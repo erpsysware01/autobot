@@ -31,11 +31,11 @@ $overlayImage_bg = imagecreatefrompng('01.png');
 $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code.php";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
-$overlayImage_qr_code= imagescale($overlayImage_qr_code , 1000, 1000); 
+$overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
 
 //$overlayImage_qr_code = imagecreatefromfile('https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png');
 #imagecopy($image, $overlayImage, 10, 10, 0, 0, imagesx($overlayImage), imagesy($overlayImage));
-imagecopy($image, $overlayImage_bg, 300, 200, 0, 0, imagesx($overlayImage_bg), imagesy($overlayImage_bg)); 
+imagecopy($image, $overlayImage_bg, 0, 0, 0, 0, imagesx($overlayImage_bg), imagesy($overlayImage_bg)); 
 imagecopy($image, $overlayImage_qr_code, 580, 1000, 0, 0, 650, 650); 
 $font = imageloadfont('./Hollow_8x16_LE.gdf'); 
 $black = imagecolorallocate($image, 0, 0, 0);
