@@ -50,7 +50,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 $font = '/font/Anakotmai-Light.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
 imagettftext($image, 66, 0,350,1750, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
-imagettftext($image, 66, 0,900,2025, $grey, $font,"ม.101");         // class_name
+imagettftext($image, 66, 0,1000,1750, $grey, $font,"ม.101");         // class_name
 imagettftext($image, 66, 0,900,2025, $grey, $font,"ค่าธรรมเนียมเทอม 1");  //payment_type_name
 imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
 imagettftext($image, 66, 0,900,2025, $grey, $font,"โรงเรียนประทีปศาสน์"); //school_name
