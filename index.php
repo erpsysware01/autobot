@@ -481,7 +481,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
 
   // https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->text_ref1&&ref2=$response->text_ref2&&name=$name
-  $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QR01.png";
+  $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/img_get.php";
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
