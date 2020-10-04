@@ -21,7 +21,7 @@ imagefill($image,0,0,$black);
 
 // load image from file and draw it onto black image;
 // for loading PNG, use imagecreatefrompng()
-$overlayImage_bg = imagecreatefrompng('01.png');
+$overlayImage_bg = imagecreatefrompng('03.png');
 
 
 // $src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png";
