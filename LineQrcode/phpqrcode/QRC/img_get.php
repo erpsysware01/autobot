@@ -1,13 +1,18 @@
 <?php
 
-// $ref1 = $_POST['ref1'];
-// $ref2 = $_POST['ref2'];
-//$flg = $_POST['flg'];    // 1 = เงินฝาก ,2 = หุุ้้น ,3 = สินเชื่อ
-$MEM_ID=$_REQUEST["ref1"];
-$hun=$_REQUEST["ref2"];
-$acc_name=$_REQUEST["name"];
+//--------------ส่งต่อ QRC ----------------
+$ref1=$_REQUEST["ref1"]; //use
+$ref2=$_REQUEST["ref2"];
+$price=$_REQUEST["price"]; //use
+// ---------------- BG -----------------------
 
-$var = urldecode($acc_name); // url ตัวเปลี่ยนภาษาไทย
+$payment_type_name=$_REQUEST["payment_type_name"];
+$student_name=$_REQUEST["student_name"];
+
+// ---------------- BG -----------------------
+$payment_type_name1 = urldecode($payment_type_name); // url ตัวเปลี่ยนภาษาไทย
+$student_name1 = urldecode($student_name);  // url ตัวเปลี่ยนภาษาไทย
+
 
 
 $image = imagecreatetruecolor(1792,2800);
@@ -23,7 +28,7 @@ $overlayImage_bg = imagecreatefrompng('BG_QR01.png');
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
 
-$src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/gen_qrcode.php?ref1=$MEM_ID&&ref2=$hun";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code.php";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
 $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
@@ -41,7 +46,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 $font = '/opt/lampp/htdocs/class/securimage/ttf/TATSana Chon-Reg.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
 imagettftext($image, 65, 0,900,1950, $grey, $font,"$var");     //name
-imagettftext($image, 48, 0,900,2025, $grey, $font,"$MEM_ID");  //REF1
+imagettftext($image, 48, 0,900,2025, $grey, $font,"$account_no");  //REF1
 // imagettftext($image, 48, 0,1000,2100, $grey, $font,"005-01-3846");  //REF2   
 
 
@@ -59,6 +64,5 @@ imagettftext($image, 48, 0,900,2025, $grey, $font,"$MEM_ID");  //REF1
 
 header("Content-Type: image/png");
 imagepng($image);
-
 
 ?>
