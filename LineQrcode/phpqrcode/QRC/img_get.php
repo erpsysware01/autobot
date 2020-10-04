@@ -31,7 +31,7 @@ $overlayImage_bg = imagecreatefrompng('01.png');
 $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code.php";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
-$overlayImage_qr_code= imagescale($overlayImage_qr_code , 700, 700); 
+$overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
 
 //$overlayImage_qr_code = imagecreatefromfile('https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png');
 #imagecopy($image, $overlayImage, 10, 10, 0, 0, imagesx($overlayImage), imagesy($overlayImage));
