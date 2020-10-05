@@ -455,7 +455,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       // $response->class_name// BG 
       // $response->school_name// BG 
   
-  if($response->ref1 ==null){
+  if($response->student_name !=null){
 
   $payment_type_name1 =urlencode($response->payment_type_name);
   $student_name1 =urlencode($response->student_name);
@@ -472,7 +472,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
   }
 
-  else if($response->ref1 !=null){
+  else if($response->student_name ==null){
   
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
