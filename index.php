@@ -445,15 +445,6 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
 
-
-  // $arrPostData = array();
-  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758"; 
-  // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = "HELLO WORD";
- 
-  
     // ค่าที่ต้องส่งไป
       // $response->ref1//QRC 
       // $response->ref2//QRC
@@ -464,10 +455,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       // $response->class_name// BG 
       // $response->school_name// BG 
   
-      $payment_type_name1 =urlencode($response->payment_type_name);
-      $student_name1 =urlencode($response->student_name);
-      $class_name1 =urlencode($response->class_name);
-      $school_name1 =urlencode($response->school_name);
+  if($response->ref1 !=null){
+
+  $payment_type_name1 =urlencode($response->payment_type_name);
+  $student_name1 =urlencode($response->student_name);
+  $class_name1 =urlencode($response->class_name);
+  $school_name1 =urlencode($response->school_name);
      
   
   $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
@@ -477,7 +470,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
   $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
 
+  }
+
+  else if($response->ref1 == null){
   
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "เลขบัตรประจำตัวประชาชนนี้ไม่พบข้อมูลในระบบ"; 
+    }
 
 
 //**********************************************************ลูบสุดท้าย******************************************* */
@@ -487,7 +488,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักอีกครั้งนะครับ";
+  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!กรุณาเลือกเมนูรายการหน้าหลัก เเล้วทำรายการใหม่อีครั้งครับ";
  
   // $arrPostData['messages'][1]['type'] = "image";
   // $arrPostData['messages'][1]['originalContentUrl'] = $tank;
