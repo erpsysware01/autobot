@@ -32,7 +32,7 @@ $overlayImage_bg = imagecreatefrompng('01.png');
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
 
-$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code.php";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code.php?ref1=$ref1&&ref2=$ref2&&price=$price";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
 $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
@@ -49,12 +49,12 @@ $black = imagecolorallocate($image, 0, 0, 0);
 // Replace path by your own font path
 $font = '/font/Anakotmai-Light.otf';
 $grey = imagecolorallocate($im, 128, 128, 128);
-imagettftext($image, 63, 0,350,1750, $grey, $font,"นาย อาลีฟ กะมูนิง");   //student_name
-imagettftext($image, 50, 0,350,1880, $grey, $font,"ม.101");         // class_name
-imagettftext($image, 50, 0,750,1880, $grey, $font,"ค่าธรรมเนียมเทอม 1");  //payment_type_name
+imagettftext($image, 63, 0,350,1750, $grey, $font,"$student_name1");   //student_name
+imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
+imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //payment_type_name
 // imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
-imagettftext($image, 50, 0,610,2000, $grey, $font,"โรงเรียนประทีปศาสน์"); //school_name
-imagettftext($image, 70, 0,720,2230, $grey, $font,"520.00"); //price
+imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
+imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
 
 
 

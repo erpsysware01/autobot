@@ -455,8 +455,6 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
-  // $_SESSION['myName'] = "Johnm";
-  // require "fleax_masage/card.php";
 
 
   // $arrPostData = array();
@@ -477,13 +475,13 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       // $response->class_name// BG 
       // $response->school_name// BG 
   
-      // $payment_type_name1 =urlencode($response->payment_type_name);
-      // $student_name1 =urlencode($response->student_name);
-      // $class_name1 =urlencode($response->class_name);
-      // $school_name1 =urlencode($response->school_name);
-
+      $payment_type_name1 =urlencode($response->payment_type_name);
+      $student_name1 =urlencode($response->student_name);
+      $class_name1 =urlencode($response->class_name);
+      $school_name1 =urlencode($response->school_name);
+     
   
-  $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/img_get.php";
+  $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
