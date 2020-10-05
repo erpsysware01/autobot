@@ -15,7 +15,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 http_response_code(200);
 
 // --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
-if($arrJson['events'][0]['message']['text'] == "ID" && $arrJson['events'][0]['message']['text'] == "id"){
+if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['message']['text'] == "id"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -488,7 +488,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" && $arrJson['events'][0]['me
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!กรุณาเลือกเมนูรายการหน้าหลัก เเล้วทำรายการใหม่อีครั้งครับ";
+  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!❌❌ กรุณาเลือกเมนูรายการหน้าหลัก เเล้วทำรายการใหม่อีกครั้งครับ";
  
   // $arrPostData['messages'][1]['type'] = "image";
   // $arrPostData['messages'][1]['originalContentUrl'] = $tank;
