@@ -28,7 +28,7 @@ imagefill($image,0,0,$black);
 
 $filename = substr($ref2, 4 ,8);
  
-$BG_picture = "'$filename'.png";
+$BG_picture = '$filename.png';
 
 $overlayImage_bg = imagecreatefrompng($BG_picture);
 
