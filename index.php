@@ -472,7 +472,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
   }
 
-  else if($response->student_name ==null){
+  else if($response->student_name == null && $response->ref2 == "NOT FOUND"){
   
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
