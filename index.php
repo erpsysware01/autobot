@@ -73,8 +73,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -109,8 +108,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -145,8 +143,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -179,8 +176,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -214,8 +210,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -249,8 +244,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -283,8 +277,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -317,8 +310,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -351,8 +343,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -385,8 +376,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -419,8 +409,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
