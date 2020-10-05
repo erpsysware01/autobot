@@ -26,11 +26,10 @@ imagefill($image,0,0,$black);
 // load image from file and draw it onto black image;
 
 
-// for loading PNG, use imagecreatefrompng()  
+// for loading PNG, use imagecreatefrompng()    0010001
 
-// $filename = substr($ref2, 4 ,8);
-// $BG_picture = '$filename.png';
-   $BG_picture = '$ref2.png';
+   $filename = substr($ref2, 4 ,8);
+   $BG_picture = '$filename.png';
    $overlayImage_bg = imagecreatefrompng($BG_picture);
 
 
