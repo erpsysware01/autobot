@@ -3,7 +3,6 @@
 //--------------ส่งต่อ QRC ----------------
 $ref1=$_REQUEST["ref1"]; //use
 $ref2=$_REQUEST["ref2"];
-$ref3=$_REQUEST["ref2"];
 $price=$_REQUEST["price"]; //use
 // ---------------- BG -----------------------
 
@@ -27,7 +26,7 @@ imagefill($image,0,0,$black);
 // load image from file and draw it onto black image;
 // for loading PNG, use imagecreatefrompng()    $filenae = f + '.png' 0010001
 
-$filename = substr($ref3, 4 ,8);
+$filename = substr($ref2, 4 ,8);
  
 $BG_picture = "$filename.png";
 
