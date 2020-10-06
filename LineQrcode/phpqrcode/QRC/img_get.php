@@ -32,8 +32,8 @@ imagefill($image,0,0,$black);
    $b = substr($ref2, 8 ,11);
    $filename = $a.$b;
    // $filename = '0010000';
-   $nik ='.png';
-   $BG_picture = "$filename.$nik";
+ 
+   $BG_picture = "$filename.png";
    $overlayImage_bg = imagecreatefrompng($BG_picture);
 
    // $overlayImage_bg = imagecreatefrompng('0010000.png');
