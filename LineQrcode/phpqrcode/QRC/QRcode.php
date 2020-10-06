@@ -11,6 +11,6 @@ $price=$_REQUEST["price"];
 //  $zero='00';
 
 include('../qrlib.php'); 
-QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price.'00');
+QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price);
 
 ?>

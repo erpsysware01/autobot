@@ -43,7 +43,7 @@ imagefill($image,0,0,$black);
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
 
-$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QR_Code1.php?ref1=$ref1&&ref2=$ref2&&price=$price";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
 $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
