@@ -33,8 +33,8 @@ imagefill($image,0,0,$black);
    $filename = $a.$b;
  
  
-   $BG_picture = "$filename.png";
-   $overlayImage_bg = imagecreatefrompng($BG_picture);
+   // $BG_picture = "";
+   $overlayImage_bg = imagecreatefrompng('$filename.png');
 
    // $overlayImage_bg = imagecreatefrompng('0010000.png');
 
