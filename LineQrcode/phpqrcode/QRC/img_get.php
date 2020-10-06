@@ -29,7 +29,7 @@ imagefill($image,0,0,$black);
 // for loading PNG, use imagecreatefrompng()    0010001
 
    $filename = substr($ref2, 4 ,8);
-   $BG_picture = 'https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG/$filename.png';
+   $BG_picture = '$filename.png';
    $overlayImage_bg = imagecreatefrompng($BG_picture);
 
    // $overlayImage_bg = imagecreatefrompng('BG/0010000.png');
