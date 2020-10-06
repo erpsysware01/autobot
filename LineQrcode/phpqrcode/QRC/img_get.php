@@ -31,7 +31,7 @@ imagefill($image,0,0,$black);
    $filename1 = substr($ref2, 0 ,3);
    $filename2 = substr($ref2, 9 ,12);
     
-   $filename =$filename1.$filename2;
+   $filename = $filename1+$filename2;
    // $filename = '0010000';
    $BG_picture = 'BG/$filename.png';
    $overlayImage_bg = imagecreatefrompng($BG_picture);
