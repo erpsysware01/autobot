@@ -28,10 +28,10 @@ imagefill($image,0,0,$black);
 
 // for loading PNG, use imagecreatefrompng()   001 01101 0001
 
-   $filename1 = substr($ref2, 0 ,2);
-   $filename2 = substr($ref2, 8 ,11);
+   $a = substr($ref2, 0 ,2);
+   $b = substr($ref2, 8 ,11);
     
-   $filename = $filename1+$filename2;
+   $filename = $a+$b;
    // $filename = '0010000';
    $BG_picture = 'BG/$filename.png';
    $overlayImage_bg = imagecreatefrompng($BG_picture);
