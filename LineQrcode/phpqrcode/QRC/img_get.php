@@ -33,10 +33,10 @@ imagefill($image,0,0,$black);
    $filename = $a.$b;
  
  
-   // $BG_picture = "";
-   $overlayImage_bg = imagecreatefrompng('$filename.png');
+   // $BG_picture = "$filename.png";
+   // $overlayImage_bg = imagecreatefrompng($BG_picture);
 
-   // $overlayImage_bg = imagecreatefrompng('0010000.png');
+   $overlayImage_bg = imagecreatefrompng('0010000.png');
 
 // $src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png";
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
