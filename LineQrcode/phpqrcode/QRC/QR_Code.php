@@ -8,9 +8,9 @@ $price=$_REQUEST["price"];
 //  $ref1="1800801571929";
 //  $ref2="001011010001";
 //  $price="500";
-
+ $zero='00';
 
 include('../qrlib.php'); 
-QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price.'00');
+QRcode::png($Bantan."\n".$ref1."\n".$ref2."\n".$price.$zero);
 
 ?>
