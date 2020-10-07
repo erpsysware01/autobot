@@ -424,7 +424,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลัก";
 
 /**********************************************************NO******************************************** */
 
