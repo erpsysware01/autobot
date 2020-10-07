@@ -304,7 +304,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //1.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -337,7 +337,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //2.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/"; 
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -370,7 +370,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //3.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -403,7 +403,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
@@ -437,7 +437,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   //                 "Accept: application/json\r\n"
   //     )
   // );
-  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
+  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   // $context  = stream_context_create( $options );
   // $result = file_get_contents( $url, false, $context );
   // $response = json_decode( $result );
@@ -469,8 +469,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   //                 "Accept: application/json\r\n"
   //     )
   // );
-  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
-  // $context  = stream_context_create( $options );
+  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   // $result = file_get_contents( $url, false, $context );
   // $response = json_decode( $result );
 
@@ -586,6 +585,68 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     $school_name1 =urlencode($response->school_name);
      
   
+    // $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QR_SSD.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
+    // $arrPostData = array();
+    // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    // $arrPostData['messages'][0]['type'] = "image";
+    // $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
+    // $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
+
+  
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "OK เบอร์โทร"; 
+
+  }
+
+  else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
+  
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล"; 
+    }
+
+    
+//**********************************************************เบอร์โทร******************************* */
+
+
+}else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "10"){
+  
+  $data=$arrJson['events'][0]['message']['text']; 
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  $data_api = array(
+    'id_card'      => $data,
+    'id_line'  => $id_line
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  
+  $url = "http://103.80.49.95:82/postchkprice_not_name/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+
+  
+  if($response->student_name !=null){
+
+    $payment_type_name1 =urlencode($response->payment_type_name);
+    $student_name1 =urlencode($response->student_name);
+    $class_name1 =urlencode($response->class_name);
+    $school_name1 =urlencode($response->school_name);
+     
+  
   // $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QR_SSD.php";
   // $arrPostData = array();
   // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -609,7 +670,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม"; 
     }
 
-
+    
 
 //**********************************************************ลูบสุดท้าย******************************************* */
 }else{
