@@ -619,7 +619,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   
 
   $data_api = array(
-    'id_card'      => $data,
+    'phone'      => $data,
     'id_line'  => $id_line
   );
 
