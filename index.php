@@ -416,6 +416,71 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   //  $arrPostData['messages'][0]['type'] = "text";
   //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
 
+
+   /**********************************************************yes****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "Yes"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  // $data_api = array(
+  //   'id_line' => $id_line,
+  //   'payment_type' => 11
+  // );
+
+  // $options = array(
+  //   'http' => array(
+  //     'method'  => 'POST',
+  //     'content' => json_encode( $data_api ),
+  //     'header'=>  "Content-Type: application/json\r\n" .
+  //                 "Accept: application/json\r\n"
+  //     )
+  // );
+  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
+  // $context  = stream_context_create( $options );
+  // $result = file_get_contents( $url, false, $context );
+  // $response = json_decode( $result );
+
+  
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน";
+
+   /**********************************************************NO****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "No"){
+
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+
+  // $data_api = array(
+  //   'id_line' => $id_line,
+  //   'payment_type' => 11
+  // );
+
+  // $options = array(
+  //   'http' => array(
+  //     'method'  => 'POST',
+  //     'content' => json_encode( $data_api ),
+  //     'header'=>  "Content-Type: application/json\r\n" .
+  //                 "Accept: application/json\r\n"
+  //     )
+  // );
+  // $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
+  // $context  = stream_context_create( $options );
+  // $result = file_get_contents( $url, false, $context );
+  // $response = json_decode( $result );
+
+  
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกเบอร์โทรของท่าน 10 หลัก";
+
  //**********************************************************เลขบัตรประชาชน******************************* */
 
 
