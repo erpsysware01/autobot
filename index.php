@@ -591,7 +591,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
 
 
   
-  if($response->student_name !=null){
+
 
     $payment_type_name1 =urlencode($response->payment_type_name);
     $student_name1 =urlencode($response->student_name);
@@ -610,17 +610,11 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "OK"; 
+  $arrPostData['messages'][0]['text'] = "$response->student_name"; 
 
-  }
-
-  else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
   
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล"; 
-    }
+
+  
 
     
 
