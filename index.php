@@ -441,6 +441,9 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   
+  $data=$arrJson['events'][0]['message']['text']; 
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
   $data_api = array(
     'id_card'      => $data,
     'id_line'  => $id_line
@@ -467,19 +470,19 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     
     
   
-    $data_api = array(
-      'id_card'      => $data,
-      'id_line'  => $id_line
-    );
+    // $data_api = array(
+    //   'id_card'      => $data,
+    //   'id_line'  => $id_line
+    // );
   
-    $options = array(
-      'http' => array(
-        'method'  => 'POST',
-        'content' => json_encode( $data_api ),
-        'header'=>  "Content-Type: application/json\r\n" .
-                    "Accept: application/json\r\n"
-        )
-    );
+    // $options = array(
+    //   'http' => array(
+    //     'method'  => 'POST',
+    //     'content' => json_encode( $data_api ),
+    //     'header'=>  "Content-Type: application/json\r\n" .
+    //                 "Accept: application/json\r\n"
+    //     )
+    // );
     
     $url = "http://103.80.49.95:82/postchkprice_name/";
     $context  = stream_context_create( $options );
@@ -524,19 +527,19 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     
     
   
-    $data_api = array(
-      'id_card'      => $data,
-      'id_line'  => $id_line
-    );
+    // $data_api = array(
+    //   'id_card'      => $data,
+    //   'id_line'  => $id_line
+    // );
   
-    $options = array(
-      'http' => array(
-        'method'  => 'POST',
-        'content' => json_encode( $data_api ),
-        'header'=>  "Content-Type: application/json\r\n" .
-                    "Accept: application/json\r\n"
-        )
-    );
+    // $options = array(
+    //   'http' => array(
+    //     'method'  => 'POST',
+    //     'content' => json_encode( $data_api ),
+    //     'header'=>  "Content-Type: application/json\r\n" .
+    //                 "Accept: application/json\r\n"
+    //     )
+    // );
     
     $url = "http://103.80.49.95:82/postchkprice/";
     $context  = stream_context_create( $options );
