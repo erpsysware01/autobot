@@ -596,7 +596,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "OK เบอร์โทร"; 
+  $arrPostData['messages'][0]['text'] = "OK"; 
 
   }
 
@@ -605,7 +605,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล"; 
+    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม"; 
     }
 
     
@@ -667,7 +667,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม"; 
+    $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล"; 
     }
 
     
