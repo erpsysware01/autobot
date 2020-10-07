@@ -437,7 +437,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกเบอร์โทรของท่าน 10 หลัก";
 
-   //**********************************************************เลขบัตรประชาชน******************************* */
+//**********************************************************เลขบัตรประชาชน******************************* */
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   
