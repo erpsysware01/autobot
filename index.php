@@ -310,12 +310,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $response = json_decode( $result );
 
   
-  
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนทุนการศึกษา";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนทุนการศึกษา";
 
    /**********************************************************สนับสนุนกองทุนวากัฟ****************************************** */
 
@@ -343,12 +343,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $response = json_decode( $result );
 
   
-  
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนกองทุนวากัฟ";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนกองทุนวากัฟ";
 
    /**********************************************************ค่าบำรุงสมาคมศิษย์เก่า****************************************** */
 
@@ -376,12 +376,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $response = json_decode( $result );
 
   
-  
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าบำรุงสมาคมศิษย์เก่า";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าบำรุงสมาคมศิษย์เก่า";
 
     /**********************************************************สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ****************************************** */
 
@@ -409,12 +409,12 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $response = json_decode( $result );
 
   
-  
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
 
  //**********************************************************เลขบัตรประชาชน******************************* */
 
