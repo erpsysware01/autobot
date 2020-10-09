@@ -30,12 +30,13 @@ imagefill($image,0,0,$black);
 
    // $a = substr($ref2, 0 ,3);
    // $b = substr($ref2, 8 ,11);
-   // $filename = $a.$b;
+   $b = substr($ref2, 8 ,11);
+   $filename = $b;
    
-   // $png = '.png';
-   // $BG  = 'BG/';
-   // $BG_picture = $BG.$filename.$png;
-   $overlayImage_bg = imagecreatefrompng('BG/0010000.png');
+   $png = '.png';
+   $BG  = 'BG/';
+   $BG_picture = $BG.$filename.$png;
+   $overlayImage_bg = imagecreatefrompng($BG_picture);
 
 //    $overlayImage_bg = imagecreatefrompng('0010000.png');
 
@@ -43,7 +44,7 @@ imagefill($image,0,0,$black);
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
 
-$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode2.php?ref1=$ref1&&ref2=$ref2&&price=$price";
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
 $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
@@ -66,8 +67,10 @@ imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //pay
 // imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
 imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
 imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
-
 imagettftext($image, 30, 0,650,2350, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
+
+    
+   
 
 
 
