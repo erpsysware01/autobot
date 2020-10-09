@@ -67,7 +67,7 @@ imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //pay
 imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
 imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
 
-imagettftext($image, 30, 0,720,2300, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
+imagettftext($image, 30, 0,720,2330, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
 
 
 
