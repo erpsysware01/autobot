@@ -28,14 +28,14 @@ imagefill($image,0,0,$black);
 
 // for loading PNG, use imagecreatefrompng()   001011010001
 
-   $a = substr($ref2, 0 ,3);
-   $b = substr($ref2, 8 ,11);
-   $filename = $a.$b;
+   // $a = substr($ref2, 0 ,3);
+   // $b = substr($ref2, 8 ,11);
+   // $filename = $a.$b;
    
-   $png = '.png';
-   $BG  = 'BG/';
-   $BG_picture = $BG.$filename.$png;
-   $overlayImage_bg = imagecreatefrompng($BG_picture);
+   // $png = '.png';
+   // $BG  = 'BG/';
+   // $BG_picture = $BG.$filename.$png;
+   $overlayImage_bg = imagecreatefrompng('BG/0010000.png');
 
 //    $overlayImage_bg = imagecreatefrompng('0010000.png');
 
