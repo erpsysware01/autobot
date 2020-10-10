@@ -458,14 +458,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
       )
   );
   
-  $url = "http://103.80.49.95:82/postchkid_pament_type/";
-  $context  = stream_context_create( $options );
-  $result = file_get_contents( $url, false, $context );
-  $response = json_decode( $result );
+  // $url = "http://103.80.49.95:82/postchkid_pament_type/";
+  // $context  = stream_context_create( $options );
+  // $result = file_get_contents( $url, false, $context );
+  // $response = json_decode( $result );
 
 
  
-  if($response->pament_type == 8 | $response->pament_type == 9 | $response->pament_type == 10 | $response->pament_type == 11 ){
+  // if($response->pament_type == 8 | $response->pament_type == 9 | $response->pament_type == 10 | $response->pament_type == 11 ){
 
     
     
@@ -512,15 +512,15 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     // $arrPostData['messages'][0]['type'] = "text";
     // $arrPostData['messages'][0]['text'] = "OK"; 
   
-    }
+    // }
   
-    else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
+    // else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
     
-      $arrPostData = array();
-      $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-      $arrPostData['messages'][0]['type'] = "text";
-      $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม"; 
-      }
+    //   $arrPostData = array();
+    //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    //   $arrPostData['messages'][0]['type'] = "text";
+    //   $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม"; 
+    //   }
   
 
 /**************************************************************เลขบัตรประชาชน ไม่่ต้อง check pament_type 1-7********************************************* */
