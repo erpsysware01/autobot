@@ -581,7 +581,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
       $arrPostData = array();
       $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
       $arrPostData['messages'][0]['type'] = "text";
-      $arrPostData['messages'][0]['text'] = "เลขบัตรประจำตัวประชาชนนี้ไม่พบข้อมูลในระบบ"; 
+      $arrPostData['messages'][0]['text'] = "เลขประชาชนไม่ถูกต้อง หรือ ไม่มีในระบบ / หรือเลขประชาชนนี้ ไม่ต้องชำระค่าใช้จ่ายรายการนี้ โปรดตรวจสอบอีกครั้ง"; 
       }
   
 
