@@ -519,7 +519,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
       $arrPostData = array();
       $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
       $arrPostData['messages'][0]['type'] = "text";
-      $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม/ กรุณาระบุเบอร์โทร 10 หลัก"; 
+      $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล กรุณาเลือก ไม่ประสงค์ออกนาม / กรุณาระบุเบอร์โทร 10 หลัก"; 
       }
   
 
