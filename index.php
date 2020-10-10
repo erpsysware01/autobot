@@ -603,9 +603,8 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $data=$arrJson['events'][0]['message']['text']; 
   $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
   
-
   $data_api = array(
-    'phone'      => $data,
+    'id_card'      => $data,
     'id_line'  => $id_line
   );
 
@@ -618,6 +617,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
       )
   );
   
+  $url = "http://103.80.49.95:82/postchkid_pament_type/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  if($response->pament_type == 8 | $response->pament_type == 9 | $response->pament_type == 10 | $response->pament_type == 11 ){
+
+
   $url = "http://103.80.49.95:82/postchkprice_not_name/";
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
@@ -642,10 +649,16 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
     $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
     $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
     
+  } 
+  else {
   
-  
-
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "เลขประชาชนไม่ถูกต้อง หรือ ไม่มีในระบบ / หรือเลขประชาชนนี้ ไม่ต้องชำระค่าใช้จ่ายรายการนี้ โปรดตรวจสอบอีกครั้ง"; 
     
+
+  }
 
 //**********************************************************ลูบสุดท้าย******************************************* */
 }else{
