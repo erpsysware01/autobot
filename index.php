@@ -667,7 +667,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['mes
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง❌❌โปรดตรวจสอบ\nเบอร์โทรและกรอกข้อมูลอีกครั้ง หรือ กรุณาเลือกเมนูรายการหน้าหลัก เเล้วทำรายการใหม่อีกครั้งครับ";
+  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง❌❌โปรดตรวจสอบ\nเบอร์โทรและกรอกข้อมูลอีกครั้ง หรือ กรุณาเลือก\nเมนูรายการหน้าหลัก เเล้วทำรายการใหม่\nอีกครั้งครับ";
  
   // $arrPostData['messages'][1]['type'] = "image";
   // $arrPostData['messages'][1]['originalContentUrl'] = $tank;
