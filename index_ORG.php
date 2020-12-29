@@ -15,7 +15,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 http_response_code(200);
 
 // --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
-if($arrJson['events'][0]['message']['text'] == "ID" ){
+if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['message']['text'] == "id"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -36,13 +36,13 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
 
   }else if($arrJson['events'][0]['message']['text'] == "วากัฟ/ซากาต/ซอดาเกาะฮ" ){
   
-    require "fleax_masage/card2.php";
+    require "fleax_masage/card3.php";
 
 
 
   }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนองค์กรในสังกัดปอเนาะบ้านตาล" ){
   
-    require "fleax_masage/card3.php";
+    require "fleax_masage/card2.php";
 
    
 
@@ -73,8 +73,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -109,8 +108,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -145,8 +143,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -179,8 +176,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -188,7 +184,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าธรรมเนียมรายเดือน";
 
 
-   /**********************************************************ค่าเรียนหลักสูตร IP****************************************** */
+/**********************************************************ค่าเรียนหลักสูตร IP****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าเรียนหลักสูตร IP"){
 
@@ -214,16 +210,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าเรียนหลักสูตร IP";
 
-
-   /**********************************************************ค่าใช้จ่ายส่วนตัวรายวัน****************************************** */
+/**********************************************************ค่าใช้จ่ายส่วนตัวรายวัน****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าใช้จ่ายส่วนตัวรายวัน"){
 
@@ -249,15 +243,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าใช้จ่ายส่วนตัวรายวัน";
 
-   /**********************************************************ค่าใช้จ่ายอื่นๆ****************************************** */
+/**********************************************************ค่าใช้จ่ายอื่นๆ****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าใช้จ่ายอื่นๆ"){
 
@@ -283,15 +276,14 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
    $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าใช้จ่ายอื่นๆ";
 
-   /**********************************************************สนับสนุนทุนการศึกษา****************************************** */
+/**********************************************************สนับสนุนทุนการศึกษา****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนทุนการศึกษา"){
 
@@ -311,21 +303,20 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //1.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนทุนการศึกษา";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนทุนการศึกษา";
 
-   /**********************************************************สนับสนุนกองทุนวากัฟ****************************************** */
+/**********************************************************สนับสนุนกองทุนวากัฟ****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนกองทุนวากัฟ"){
 
@@ -345,21 +336,20 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //2.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/"; 
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนกองทุนวากัฟ";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างสนับสนุนกองทุนวากัฟ";
 
-   /**********************************************************ค่าบำรุงสมาคมศิษย์เก่า****************************************** */
+  /**********************************************************ค่าบำรุงสมาคมศิษย์เก่า****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "ค่าบำรุงสมาคมศิษย์เก่า"){
 
@@ -379,21 +369,20 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //3.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
-   $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าบำรุงสมาคมศิษย์เก่า";
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าบำรุงสมาคมศิษย์เก่า";
 
-    /**********************************************************สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ****************************************** */
+  /**********************************************************สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ****************************************** */
 
 }else if($arrJson['events'][0]['message']['text'] == "สนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ"){
 
@@ -413,29 +402,48 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
                   "Accept: application/json\r\n"
       )
   );
-  $url = "http://103.80.49.95:82/postchkupdateinsert/";  //4.****************API  */
+  $url = "http://103.80.49.95:82/postchkupdateinsert/";  
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
   
-  $image_url = "https://mokmoon.com/images/LINEDevelopers.png"; 
-  $image_url = "https://raw.githubusercontent.com/aicit2015/picture-/master/assalam.png";
+  require "fleax_masage/confirm_card.php";
+  // $arrPostData = array();
+  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+  //  $arrPostData['messages'][0]['type'] = "text";
+  //  $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
+
+/**********************************************************yes****************************************** */
+
+}else if($arrJson['events'][0]['message']['text'] == "Yes"){
+
+
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
    $arrPostData['messages'][0]['type'] = "text";
-   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักของนักเรียน เพื่อสร้างค่าสนับสนุนภารกิจ สถาบันสุรินทร์ พิศสุวรรณ";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลัก";
 
- //**********************************************************เลขบัตรประชาชน******************************* */
+/**********************************************************NO******************************************** */
 
+}else if($arrJson['events'][0]['message']['text'] == "No"){
+
+ 
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+
+   $arrPostData['messages'][0]['type'] = "text";
+   $arrPostData['messages'][0]['text'] = "กรุณากรอกเบอร์โทรของท่าน 10 หลัก";
+
+//**********************************************************เลขบัตรประชาชน******************************* */
 
 }else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "13"){
   
   $data=$arrJson['events'][0]['message']['text']; 
   $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
   
-
   $data_api = array(
     'id_card'      => $data,
     'id_line'  => $id_line
@@ -450,48 +458,207 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
       )
   );
   
-  $url = "http://103.80.49.95:8080/postchkprice/";
+  $url = "http://103.80.49.95:82/postchkid_pament_type/";
   $context  = stream_context_create( $options );
   $result = file_get_contents( $url, false, $context );
   $response = json_decode( $result );
 
-  // $_SESSION['myName'] = "Johnm";
-  // require "fleax_masage/card.php";
 
-
-  // $arrPostData = array();
-  // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  // $arrPostData['messages'][0]['type'] = "text";
-  // $arrPostData['messages'][0]['text'] = "รหัสบัตรประชาชน คือ 1959900506758"; 
-  // $arrPostData['messages'][1]['type'] = "text";
-  // $arrPostData['messages'][1]['text'] = "HELLO WORD";
  
+  if($response->pament_type == 8 | $response->pament_type == 9 | $response->pament_type == 10 | $response->pament_type == 11 ){
+
+    
+    
   
-    // ค่าที่ต้องส่งไป
-      // $response->ref1//QRC //BG
-      // $response->ref2//QRC
-      // $response->price//QRC //BG
+    // $data_api = array(
+    //   'id_card'      => $data,
+    //   'id_line'  => $id_line
+    // );
+  
+    // $options = array(
+    //   'http' => array(
+    //     'method'  => 'POST',
+    //     'content' => json_encode( $data_api ),
+    //     'header'=>  "Content-Type: application/json\r\n" .
+    //                 "Accept: application/json\r\n"
+    //     )
+    // );
+    
+    $url = "http://103.80.49.95:82/postchkprice_name/";
+    $context  = stream_context_create( $options );
+    $result = file_get_contents( $url, false, $context );
+    $response = json_decode( $result );
+  
+  
+    
+    if($response->student_name !=null){
+  
+      $payment_type_name1 =urlencode($response->payment_type_name);
+      $student_name1 =urlencode($response->student_name);
+      $class_name1 =urlencode($response->class_name);
+      $school_name1 =urlencode($response->school_name);
+       
+    
+      $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QRcode2.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
+      $arrPostData = array();
+      $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+      $arrPostData['messages'][0]['type'] = "image";
+      $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
+      $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
+  
+    
+    // $arrPostData = array();
+    // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    // $arrPostData['messages'][0]['type'] = "text";
+    // $arrPostData['messages'][0]['text'] = "OK"; 
+  
+    }
+  
+    else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
+    
+      $arrPostData = array();
+      $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+      $arrPostData['messages'][0]['type'] = "text";
+      $arrPostData['messages'][0]['text'] = "ไม่พบข้อมูลของท่านในฐานข้อมูล โปรดตรวจสอบเลขประจำตัวประชาขน หรือกรุณาเลือก ไม่ประสงค์ออกนาม / กรุณาระบุเบอร์โทร 10 หลัก"; 
+      }
+  
 
-      // $response->payment_type_name// BG 
-      // $response->student_name// BG 
+/**************************************************************เลขบัตรประชาชน ไม่่ต้อง check pament_type 1-7********************************************* */
+  } else {
+
+    
+    
+  
+    // $data_api = array(
+    //   'id_card'      => $data,
+    //   'id_line'  => $id_line
+    // );
+  
+    // $options = array(
+    //   'http' => array(
+    //     'method'  => 'POST',
+    //     'content' => json_encode( $data_api ),
+    //     'header'=>  "Content-Type: application/json\r\n" .
+    //                 "Accept: application/json\r\n"
+    //     )
+    // );
+    
+    $url = "http://103.80.49.95:82/postchkprice/";
+    $context  = stream_context_create( $options );
+    $result = file_get_contents( $url, false, $context );
+    $response = json_decode( $result );
+  
+  
+      // ค่าที่ต้องส่งไป
+        // $response->ref1//QRC 
+        // $response->ref2//QRC
+        // $response->price//QRC //BG
+          
+        // $response->payment_type_name// BG 
+        // $response->student_name// BG 
+        // $response->class_name// BG 
+        // $response->school_name// BG 
+    
+    if($response->student_name !=null){
+  
+    $payment_type_name1 =urlencode($response->payment_type_name);
+    $student_name1 =urlencode($response->student_name);
+    $class_name1 =urlencode($response->class_name);
+    $school_name1 =urlencode($response->school_name);
+       
+    
+    $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QRcode1.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
+    $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
+  
+    }
+  
+    else if($response->student_name == null | $response->ref2 == "NOT FOUND"){
+    
+      $arrPostData = array();
+      $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+      $arrPostData['messages'][0]['type'] = "text";
+      $arrPostData['messages'][0]['text'] = "เลขประชาชนไม่ถูกต้อง หรือ ไม่มีในระบบ / หรือเลขประชาชนนี้ ไม่ต้องชำระค่าใช้จ่ายรายการนี้ โปรดตรวจสอบอีกครั้ง"; 
+      }
+  
+
+
+  }
+  
+  
+ 
+
+
+    
+//**********************************************************เบอร์โทร******************************* */
+
+
+}else if(ctype_digit ( $arrJson['events'][0]['message']['text'] ) && strlen($arrJson['events'][0]['message']['text'])== "10"){
+  
+
+
+  $data=$arrJson['events'][0]['message']['text']; 
+  $id_line =$arrJson['events'][0]['source']['userId']; //รับ id line
+  
+  $data_api = array(
+    'phone'      => $data,
+    'id_line'  => $id_line
+  );
+
+  $options = array(
+    'http' => array(
+      'method'  => 'POST',
+      'content' => json_encode( $data_api ),
+      'header'=>  "Content-Type: application/json\r\n" .
+                  "Accept: application/json\r\n"
+      )
+  );
+  
+  $url = "http://103.80.49.95:82/postchkid_pament_type/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
+  if($response->pament_type == 8 | $response->pament_type == 9 | $response->pament_type == 10 | $response->pament_type == 11 ){
+
+
+  $url = "http://103.80.49.95:82/postchkprice_not_name/";
+  $context  = stream_context_create( $options );
+  $result = file_get_contents( $url, false, $context );
+  $response = json_decode( $result );
+
 
   
-      // $payment_type_name1 =urlencode($response->payment_type_name);
-      // $student_name1 =urlencode($response->student_name);
 
 
-  // https://select2web-autobot-test.herokuapp.com/imagemap/1.jpg
-  // https://103.80.49.95:82/LineQrcode/phpqrcode/QRC/bg_loan.png
-  // https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/img_get.php?ref1=$response->text_ref1&&ref2=$response->text_ref2&&name=$name
-  $QRC_PNG="https://select2web-autobot-test.herokuapp.com/imagemap/1.jpg";
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
-  $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
-
+    $payment_type_name1 =urlencode($response->payment_type_name);
+    $student_name1 =urlencode($response->student_name);
+    $class_name1 =urlencode($response->class_name);
+    $school_name1 =urlencode($response->school_name);
+     
   
+    
 
+   $QRC_PNG="https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/BG_QRcode2.php?ref1=$response->ref1&&ref2=$response->ref2&&price=$response->price&&payment_type_name=$payment_type_name1&&student_name=$student_name1&&class_name=$class_name1&&school_name=$school_name1";
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['originalContentUrl'] = $QRC_PNG;
+    $arrPostData['messages'][0]['previewImageUrl'] =  $QRC_PNG;
+    
+  } 
+  else {
+  
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "เลขประชาชนไม่ถูกต้อง หรือ ไม่มีในระบบ / หรือเลขประชาชนนี้ ไม่ต้องชำระค่าใช้จ่ายรายการนี้ โปรดตรวจสอบอีกครั้ง"; 
+    
+
+  }
 
 //**********************************************************ลูบสุดท้าย******************************************* */
 }else{
@@ -500,7 +667,7 @@ if($arrJson['events'][0]['message']['text'] == "ID" ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง!!!กรุณากรอกข้อมูลเลขบัตรประชาชน 13 หลักอีกครั้งนะครับ";
+  $arrPostData['messages'][0]['text'] = "กรอกข้อมูลไม่ถูกต้อง❌❌\nโปรดตรวจสอบและกรอกข้อมูลอีกครั้ง หรือ \nกรุณาเลือกเมนูรายการหน้าหลัก เเล้วทำรายการใหม่อีกครั้งครับ";
  
   // $arrPostData['messages'][1]['type'] = "image";
   // $arrPostData['messages'][1]['originalContentUrl'] = $tank;
