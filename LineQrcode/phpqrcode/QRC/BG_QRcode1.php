@@ -62,12 +62,23 @@ $black = imagecolorallocate($image, 0, 0, 0);
 $font = '/font/Anakotmai-Light.otf';
 $grey = imagecolorallocate($image, 128, 128, 128);
 imagettftext($image, 63, 0,350,1750, $grey, $font,"$student_name1");   //student_name
-imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
+// imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
 imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //payment_type_name
 // imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
-imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
+// imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
 imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
- 
+
+
+if ($payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน'){
+   imagettftext($image, 50, 0,610,2000, $grey, $font,"-");
+   imagettftext($image, 50, 0,350,1880, $grey, $font,"-");  
+}
+else
+{
+   imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1");
+   imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1"); 
+}
+
 if( $payment_type_name1 == 'ค่าธรรมเนียมรายเดือน ' | $payment_type_name1 == 'ค่าเรียนหลักสูตร IP '| $payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน' | $payment_type_name1 == 'ค่าใช้จ่ายอื่นๆ' ){
 
    imagettftext($image, 30, 0,650,2350, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
