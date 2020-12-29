@@ -60,7 +60,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 // $text = 'Testing...66666666666666666666666666666666666666666666666666';
 // Replace path by your own font path
 $font = '/font/Anakotmai-Light.otf';
-$grey = imagecolorallocate($im, 128, 128, 128);
+$grey = imagecolorallocate($image, 128, 128, 128);
 imagettftext($image, 63, 0,350,1750, $grey, $font,"$student_name1");   //student_name
 imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
 imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //payment_type_name
