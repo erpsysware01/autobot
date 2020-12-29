@@ -68,10 +68,16 @@ imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //pay
 imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
  
 if ($payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน' ){
-   imagettftext($image, 50, 0,350,1880, $grey, $font,"123");         // class_name
-   imagettftext($image, 50, 0,610,2000, $grey, $font,"123");
+   imagettftext($image, 50, 0,350,1880, $grey, $font,"-");         // class_name
+   imagettftext($image, 50, 0,610,2000, $grey, $font,"-");
 
 }
+else {
+   imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
+   imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1");
+   
+}
+
 if( $payment_type_name1 == 'ค่าธรรมเนียมรายเดือน ' | $payment_type_name1 == 'ค่าเรียนหลักสูตร IP '| $payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน' | $payment_type_name1 == 'ค่าใช้จ่ายอื่นๆ' ){
 
    imagettftext($image, 30, 0,650,2350, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
