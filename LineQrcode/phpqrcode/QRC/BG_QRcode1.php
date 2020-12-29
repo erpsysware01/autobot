@@ -31,7 +31,7 @@ imagefill($image,0,0,$black);
    $a = substr($ref2, 0 ,3);
    $b = substr($ref2, 8 ,11);
    //$filename = $a.$b;   //0007
-   $filename = "0007"
+   $filename = "0007";
    $png = '.png';
    $BG  = 'BG/';
    $BG_picture = $BG.$filename.$png;
