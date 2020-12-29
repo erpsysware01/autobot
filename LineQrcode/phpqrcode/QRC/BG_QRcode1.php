@@ -41,10 +41,10 @@ imagefill($image,0,0,$black);
 
 // $src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png";
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
-
-
-// $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
-$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php";
+print("FFFFFFFFFFFF")
+print($ref1)
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
+//$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php";
 
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
