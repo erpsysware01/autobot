@@ -14,7 +14,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 http_response_code(200);
 
-// --------------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
+// -----------------------------------------ส่ง user id---------------------------------------------------------------------------------------------
 if($arrJson['events'][0]['message']['text'] == "ID" | $arrJson['events'][0]['message']['text'] == "id"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
