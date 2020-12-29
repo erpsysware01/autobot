@@ -45,34 +45,34 @@ imagefill($image,0,0,$black);
 // $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
 $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php";
 
-// $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
+$overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
-// $overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
+$overlayImage_qr_code= imagescale($overlayImage_qr_code , 650, 650); 
 
-// //$overlayImage_qr_code = imagecreatefromfile('https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png');
-// #imagecopy($image, $overlayImage, 10, 10, 0, 0, imagesx($overlayImage), imagesy($overlayImage));
-// imagecopy($image, $overlayImage_bg, 0, 0, 0, 0, imagesx($overlayImage_bg), imagesy($overlayImage_bg)); 
-// imagecopy($image, $overlayImage_qr_code, 580, 1000, 0, 0, 650, 650); 
-// $font = imageloadfont('./Hollow_8x16_LE.gdf'); 
-// $black = imagecolorallocate($image, 0, 0, 0);
-// //imagestring ($image , 5 , 0, 0 , 'HelloWorld999999999999999999999999999999999' , $black  ) ;
+//$overlayImage_qr_code = imagecreatefromfile('https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png');
+//imagecopy($image, $overlayImage, 10, 10, 0, 0, imagesx($overlayImage), imagesy($overlayImage));
+imagecopy($image, $overlayImage_bg, 0, 0, 0, 0, imagesx($overlayImage_bg), imagesy($overlayImage_bg)); 
+imagecopy($image, $overlayImage_qr_code, 580, 1000, 0, 0, 650, 650); 
+$font = imageloadfont('./Hollow_8x16_LE.gdf'); 
+$black = imagecolorallocate($image, 0, 0, 0);
+//imagestring ($image , 5 , 0, 0 , 'HelloWorld999999999999999999999999999999999' , $black  ) ;
 
-// // $text = 'Testing...66666666666666666666666666666666666666666666666666';
-// // Replace path by your own font path
-// $font = '/font/Anakotmai-Light.otf';
-// $grey = imagecolorallocate($im, 128, 128, 128);
-// imagettftext($image, 63, 0,350,1750, $grey, $font,"$student_name1");   //student_name
-// imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
-// imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //payment_type_name
-// // imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
-// imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
-// imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
+// $text = 'Testing...66666666666666666666666666666666666666666666666666';
+// Replace path by your own font path
+$font = '/font/Anakotmai-Light.otf';
+$grey = imagecolorallocate($im, 128, 128, 128);
+imagettftext($image, 63, 0,350,1750, $grey, $font,"$student_name1");   //student_name
+imagettftext($image, 50, 0,350,1880, $grey, $font,"$class_name1");         // class_name
+imagettftext($image, 50, 0,750,1880, $grey, $font,"$payment_type_name1");  //payment_type_name
+// imagettftext($image, 66, 0,900,2025, $grey, $font,"ปีการศึกษา 2563"); // no data base
+imagettftext($image, 50, 0,610,2000, $grey, $font,"$school_name1"); //school_name
+imagettftext($image, 70, 0,720,2230, $grey, $font,"$price"); //price
  
-// if( $payment_type_name1 == 'ค่าธรรมเนียมรายเดือน ' | $payment_type_name1 == 'ค่าเรียนหลักสูตร IP '| $payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน' | $payment_type_name1 == 'ค่าใช้จ่ายอื่นๆ' ){
+if( $payment_type_name1 == 'ค่าธรรมเนียมรายเดือน ' | $payment_type_name1 == 'ค่าเรียนหลักสูตร IP '| $payment_type_name1 == 'ค่าใช้จ่ายส่วนตัวรายวัน' | $payment_type_name1 == 'ค่าใช้จ่ายอื่นๆ' ){
 
-//    imagettftext($image, 30, 0,650,2350, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
+   imagettftext($image, 30, 0,650,2350, $grey, $font,"สามารถบันทึกเก็บไว้ใช้ในครั้งต่อไป"); 
 
-//     }
+    }
 
 
 
