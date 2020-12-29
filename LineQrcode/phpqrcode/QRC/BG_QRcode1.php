@@ -30,8 +30,8 @@ imagefill($image,0,0,$black);
 
    $a = substr($ref2, 0 ,3);
    $b = substr($ref2, 8 ,11);
-   //$filename = $a.$b;   //0007
-   $filename = "0007";
+   $filename = $a.$b;   //0007
+   //$filename = "0007";
    $png = '.png';
    $BG  = 'BG/';
    $BG_picture = $BG.$filename.$png;
@@ -42,8 +42,8 @@ imagefill($image,0,0,$black);
 // $src = "https://ff8c0a85c27f.ngrok.io/LineQrcode/phpqrcode/QRC/bg_member.png";
 // $overlayImage_bg = imagecreatefromstring(file_get_contents($src));
 
-// $src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
-$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php";
+$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php?ref1=$ref1&&ref2=$ref2&&price=$price";
+//$src = "https://select2web-autobot-bantan.herokuapp.com/LineQrcode/phpqrcode/QRC/QRcode.php";
 
 $overlayImage_qr_code = imagecreatefromstring(file_get_contents($src));
 
